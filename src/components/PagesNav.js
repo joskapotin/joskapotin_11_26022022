@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function PagesNav() {
   return (
-    <nav className="nav-main" aria-label="primary">
-      <Link to="/">Accueil</Link>
-      <Link to="/about">A propos</Link>
+    <nav className="primary-nav" aria-label="primary">
+      <NavLink className="primary-nav__link" to="/">
+        Accueil
+      </NavLink>
+      <NavLink className="primary-nav__link" to="/about">
+        A propos
+      </NavLink>
     </nav>
   );
 }

@@ -1,7 +1,6 @@
-function Hero({ text, image, height }) {
+function Hero({ text, image }) {
   const style = {
     backgroundImage: "url(" + image + ")",
-    height: height,
   };
 
   return (
