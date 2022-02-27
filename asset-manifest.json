@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/joskapotin_11_26022022/static/css/main.7f6defbf.css",
-    "main.js": "/joskapotin_11_26022022/static/js/main.97390521.js",
-    "static/js/787.a8afa031.chunk.js": "/joskapotin_11_26022022/static/js/787.a8afa031.chunk.js",
-    "static/media/hero01.png": "/joskapotin_11_26022022/static/media/hero01.024f945a990ae17b81b7.png",
-    "index.html": "/joskapotin_11_26022022/index.html",
-    "main.7f6defbf.css.map": "/joskapotin_11_26022022/static/css/main.7f6defbf.css.map",
-    "main.97390521.js.map": "/joskapotin_11_26022022/static/js/main.97390521.js.map",
-    "787.a8afa031.chunk.js.map": "/joskapotin_11_26022022/static/js/787.a8afa031.chunk.js.map"
+    "main.css": "/https//joskapotin.github.io/joskapotin_11_26022022/static/css/main.3b294e36.css",
+    "main.js": "/https//joskapotin.github.io/joskapotin_11_26022022/static/js/main.126082ff.js",
+    "static/js/787.a8afa031.chunk.js": "/https//joskapotin.github.io/joskapotin_11_26022022/static/js/787.a8afa031.chunk.js",
+    "static/media/hero01.png": "/https//joskapotin.github.io/joskapotin_11_26022022/static/media/hero01.024f945a990ae17b81b7.png",
+    "index.html": "/https//joskapotin.github.io/joskapotin_11_26022022/index.html",
+    "main.3b294e36.css.map": "/https//joskapotin.github.io/joskapotin_11_26022022/static/css/main.3b294e36.css.map",
+    "main.126082ff.js.map": "/https//joskapotin.github.io/joskapotin_11_26022022/static/js/main.126082ff.js.map",
+    "787.a8afa031.chunk.js.map": "/https//joskapotin.github.io/joskapotin_11_26022022/static/js/787.a8afa031.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f6defbf.css",
-    "static/js/main.97390521.js"
+    "static/css/main.3b294e36.css",
+    "static/js/main.126082ff.js"
   ]
 }
