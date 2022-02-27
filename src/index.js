@@ -1,15 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
+import { HousingContextProvider } from "./HousingContext";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+/**
+ * Turns URL path into router basename by removing everything after the last slash
+ *
+ * @HindleyMilner getBasename :: string -> string
+ *
+ * @pure
+ * @param {string} path URL path, probably window.location.pathname
+ * @returns {string} final basename
+ *
+ * @example
+ * getBaseName('/some/structure/page'); // => '/some/structure'
+ */
+const getBasename = path => path.substring(0, path.lastIndexOf("\\"));
+
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <HousingContextProvider>
+      <Router>
+        {console.log(getBasename(window.location.pathname))}
+        <App />
+      </Router>
+    </HousingContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

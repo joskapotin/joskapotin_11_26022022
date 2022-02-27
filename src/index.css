@@ -49,3 +49,33 @@ body {
   grid-area: stack;
   justify-self: center;
 }
+
+.card-grid {
+  --min: 335px;
+  --gap: 1rem;
+
+  display: grid;
+  grid-gap: var(--gap);
+  /* min() with 100% prevents overflow
+  in extra narrow spaces */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+}
+
+.card {
+  display: grid;
+  grid-template-areas: "card-stack";
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  grid-area: card-stack;
+  object-fit: cover;
+}
+
+.card__title {
+  margin-top: auto;
+  margin-bottom: 0;
+  grid-area: card-stack;
+}
