@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import { useParams } from 'react-router-dom'
-import { HousingContext } from '../../contexts/HousingContext'
 
-import Loading from '../../components/Loading'
+import { HousingContext } from '../../utils/contexts/HousingContext'
+import Spinner from '../../components/Spinner'
 import Error from '../../components/Error'
 import Carousel from '../../components/Carousel'
 import TagList from '../../components/TagList'
@@ -14,8 +14,6 @@ import './index.css'
 function Housing() {
   const { data, loading, error } = useContext(HousingContext)
   const { id } = useParams()
-  console.log('data', data)
-  console.log('param', id)
 
   const housing = data.find((item) => item.id === id)
 
@@ -25,12 +23,14 @@ function Housing() {
     </li>
   ))
 
-  if (loading) return <Loading />
-  if (error) return <Error />
+  if ((loading || !data || data.length === 0) && !error)
+    return <Spinner>Loading...</Spinner>
+
+  if (error) return <Error error={error} />
 
   return (
     <main className="main housing__page">
-      <Carousel className="housing__carousel" />
+      <Carousel className="housing__carousel" pictures={housing.pictures} />
       <h1 className="housing__title">{housing.title}</h1>
       <p className="housing__location">{housing.location}</p>
       <TagList className="housing__taglist" tags={housing.tags} />

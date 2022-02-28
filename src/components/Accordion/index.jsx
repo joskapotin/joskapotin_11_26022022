@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import useToggler from '../../hooks/useToggler'
+import useToggler from '../../utils/hooks/useToggler'
 import './index.css'
 
 function Accordion({

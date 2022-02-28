@@ -1,6 +1,6 @@
 {
   "name": "joskapotin_11_26022022",
-  "homepage": "joskapotin_11_26022022/",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
-    "react-router-dom": "^6.2.1",
+    "react-router-dom": "6",
     "stylelint": "^14.5.3",
     "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-config-prettier": "^9.0.3",

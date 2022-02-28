@@ -48,7 +48,7 @@
 }
 
 .accordion-open::after {
-  transform: rotate(320deg);
+  transform: rotate(315deg);
   transition: transform 0.3s;
 }
 

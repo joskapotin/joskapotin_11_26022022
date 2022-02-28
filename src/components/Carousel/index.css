@@ -1,0 +1,61 @@
+.carousel {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  height: 255px;
+  align-content: stretch;
+  align-items: stretch;
+  justify-content: stretch;
+  border-radius: 10px;
+  grid-template-areas: 'carousel-stack';
+  justify-items: stretch;
+}
+
+.carousel__btn {
+  z-index: 10;
+  align-self: center;
+  padding: 15px;
+  border: none;
+  background: none;
+  grid-area: carousel-stack;
+}
+
+.carousel__btn-prev {
+  justify-self: start;
+}
+
+.carousel__btn-next {
+  justify-self: end;
+}
+
+.carousel__btn::after {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  content: '';
+  transform-origin: center;
+  transition: transform 0.3s;
+}
+
+.carousel__btn-prev::after {
+  transform: rotate(225deg);
+}
+
+.carousel__btn-next::after {
+  transform: rotate(45deg);
+}
+
+.carousel__item {
+  height: max(25vh, 15rem);
+  align-self: stretch;
+  grid-area: carousel-stack;
+}
+
+.carousel__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

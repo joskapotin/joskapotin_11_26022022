@@ -1,23 +1,22 @@
 import { useContext } from 'react'
-import { HousingContext } from '../../contexts/HousingContext'
+import { HousingContext } from '../../utils/contexts/HousingContext'
 import HousingCard from '../HousingCard'
-import Loading from '../Loading'
+import Spinner from '../Spinner'
 import Error from '../Error'
 
 function HousingList() {
-  const { data, error } = useContext(HousingContext)
+  const { data, loading, error } = useContext(HousingContext)
 
-  let content = <Loading />
-  if (error) {
-    content = <Error />
-  }
-  if (data) {
-    content = data.map((housing) => (
-      <HousingCard key={housing.id} housing={housing} />
-    ))
-  }
+  if ((loading || !data || data.length === 0) && !error)
+    return <Spinner>Loading...</Spinner>
 
-  return <div className="card-grid">{content}</div>
+  if (error) return <Error error={error} />
+
+  const housingListElements = data.map((housing) => (
+    <HousingCard key={housing.id} housing={housing} />
+  ))
+
+  return <div className="card-grid">{housingListElements}</div>
 }
 
 export default HousingList

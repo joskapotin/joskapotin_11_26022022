@@ -16,7 +16,7 @@
 }
 
 .housing__title {
-  margin: 0;
+  margin: 15px 0 0;
   grid-area: title;
 }
 
