@@ -9,23 +9,23 @@ function HousingContextProvider(props) {
 
   console.log('inside context')
 
-  useEffect(() => {
+  async function fetchData() {
     setLoading(true)
-    setData(null)
-    setError(null)
+    try {
+      const response = await fetch(url)
+      const result = await response.json()
+      setData(result)
+    } catch (err) {
+      console.log(err)
+      setError(err)
+    } finally {
+      setLoading(false)
+    }
+  }
 
+  useEffect(() => {
     console.log('inside useEffect')
-
-    fetch(url)
-      .then((result) => result.json())
-      .then((data) => {
-        setLoading(false)
-        setData(data)
-      })
-      .catch((error) => {
-        setLoading(false)
-        setError('An error occurred. Awkward..', error)
-      })
+    fetchData()
   }, [])
 
   return (
