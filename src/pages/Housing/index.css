@@ -17,12 +17,18 @@
 
 .housing__title {
   margin: 15px 0 0;
+  font-size: 18px;
+  font-weight: 500;
   grid-area: title;
+  line-height: 26px;
 }
 
 .housing__location {
   margin: 5px 0 0;
+  font-size: 14px;
+  font-weight: 500;
   grid-area: location;
+  line-height: 20px;
 }
 
 .housing__rating {
@@ -48,4 +54,34 @@
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+@media screen and (min-width: 860px) {
+  .housing__page {
+    grid-template-areas:
+      'carousel carousel carousel carousel'
+      'title title title host'
+      'location location location host'
+      'tags tags tags rating'
+      'description description equipments equipments';
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .housing__title {
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  .housing__location {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .housing__description {
+    margin-right: 35px;
+  }
+
+  .housing__equipments {
+    margin-left: 35px;
+  }
 }

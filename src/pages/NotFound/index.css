@@ -18,3 +18,21 @@
   font-size: 14px;
   font-weight: 500;
 }
+
+@media screen and (min-width: 860px) {
+  .not-found__title {
+    margin: 0;
+    font-size: 288px;
+    line-height: 411px;
+  }
+
+  .not-found__subtitle {
+    font-size: 36px;
+    line-height: 51px;
+  }
+
+  .not-found__link:link,
+  .not-found__link:visited {
+    font-size: 18px;
+  }
+}

@@ -32,3 +32,15 @@
   justify-self: flex-start;
   line-height: 24px;
 }
+
+@media screen and (min-width: 860px) {
+  .hero {
+    height: 223px;
+  }
+
+  .hero-text {
+    font-size: 48px;
+    justify-self: center;
+    line-height: 1.5;
+  }
+}

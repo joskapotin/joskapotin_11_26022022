@@ -3,6 +3,7 @@ import { HousingContext } from '../../utils/contexts/HousingContext'
 import HousingCard from '../HousingCard'
 import Spinner from '../Spinner'
 import Error from '../Error'
+import './index.css'
 
 function HousingList() {
   const { data, loading, error } = useContext(HousingContext)

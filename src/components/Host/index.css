@@ -10,6 +10,10 @@
 
 .host__name {
   margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: right;
 }
 
 .host__photo {
@@ -17,4 +21,16 @@
   height: 32px;
   border-radius: 32px;
   object-fit: cover;
+}
+
+@media screen and (min-width: 860px) {
+  .host__name {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .host__photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 64px;
+  }
 }
