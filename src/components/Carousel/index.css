@@ -2,7 +2,6 @@
   position: relative;
   display: grid;
   overflow: hidden;
-  height: 255px;
   align-content: stretch;
   align-items: stretch;
   justify-content: stretch;
@@ -48,7 +47,7 @@
 }
 
 .carousel__item {
-  height: max(25vh, 15rem);
+  height: 255px;
   align-self: stretch;
   grid-area: carousel-stack;
 }
