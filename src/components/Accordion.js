@@ -1,6 +1,6 @@
 import useToggler from "../hooks/useToggler";
 
-function Accordion({ children, title, className }) {
+function Accordion({ children, title, className = "accordion__default" }) {
   const [isOpen, toggle] = useToggler(false);
 
   const statusClassName = isOpen ? "accordion-open" : "accordion-close";

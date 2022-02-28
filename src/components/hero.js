@@ -1,4 +1,4 @@
-function Hero({ text, image }) {
+function Hero({ text = "", image }) {
   const style = {
     backgroundImage: "url(" + image + ")",
   };
