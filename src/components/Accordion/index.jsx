@@ -1,8 +1,14 @@
+import PropTypes from 'prop-types'
 import useToggler from '../../hooks/useToggler'
 import './index.css'
 
-function Accordion({ children, title, className = 'accordion__default' }) {
-  const [isOpen, toggle] = useToggler(false)
+function Accordion({
+  children,
+  title,
+  className = 'accordion__default',
+  open = false,
+}) {
+  const [isOpen, toggle] = useToggler(open)
 
   const statusClassName = isOpen ? 'accordion-open' : 'accordion-close'
 
@@ -22,3 +28,10 @@ function Accordion({ children, title, className = 'accordion__default' }) {
 }
 
 export default Accordion
+
+Accordion.proptype = {
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  on: PropTypes.bool,
+}

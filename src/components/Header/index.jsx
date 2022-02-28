@@ -2,7 +2,7 @@ import Logo from '../Logo'
 import PrimaryNav from '../PrimaryNav'
 import './index.css'
 
-function Header(props) {
+function Header() {
   return (
     <header className="header">
       <Logo />

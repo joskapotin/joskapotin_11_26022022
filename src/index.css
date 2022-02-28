@@ -4,19 +4,6 @@
   box-sizing: border-box;
 }
 
-/* MAKE THE FOOTER STICK TO THE BOTTOM */
-html,
-body,
-#root,
-.app {
-  height: 100%;
-}
-.app {
-  display: flex;
-  flex-direction: column;
-}
-/* END OF STICKY FOOTER */
-
 body {
   margin: 0;
   color: hsla(0, 100%, 69%, 1);
@@ -34,83 +21,21 @@ h1 {
   line-height: 26px;
 }
 
+/* MAKE THE FOOTER STICK TO THE BOTTOM */
+html,
+body,
+#root,
+.app {
+  height: 100%;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+}
+/* END OF STICKY FOOTER */
+
 /* MAIN */
 .main {
   flex-grow: 1; /* for the sticky footer trick */
   padding: 0 20px;
-}
-
-/* HOUSING */
-.housing__page {
-  display: grid;
-  align-content: start;
-  grid-template-areas:
-    'carousel carousel'
-    'title title'
-    'location location'
-    'tags tags'
-    'rating host'
-    'description description'
-    'equipments equipments';
-}
-
-.housing__carousel {
-  grid-area: carousel;
-}
-
-.housing__title {
-  margin: 0;
-  grid-area: title;
-}
-
-.housing__location {
-  margin: 5px 0 0;
-  grid-area: location;
-}
-
-.housing__rating {
-  align-self: center;
-  margin-top: 15px;
-  grid-area: rating;
-}
-
-.housing__description,
-.housing__equipments {
-  margin: 20px 0 0;
-}
-
-.housing__description {
-  grid-area: description;
-}
-
-.housing__equipments {
-  grid-area: equipments;
-}
-
-.equipment-list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-/* NOT FOUND */
-.not-found__page {
-  text-align: center;
-}
-
-.not-found__title {
-  font-size: 96px;
-  font-weight: 700;
-}
-
-.not-found__subtitle {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.not-found__link:link,
-.not-found__link:visited {
-  color: #ff6060;
-  font-size: 14px;
-  font-weight: 500;
 }

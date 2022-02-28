@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import './index.css'
 
 function Host({ host, className = 'host__default' }) {
@@ -10,3 +11,11 @@ function Host({ host, className = 'host__default' }) {
 }
 
 export default Host
+
+Host.proptype = {
+  host: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    picture: PropTypes.string.isRequired,
+  }),
+  className: PropTypes.string,
+}

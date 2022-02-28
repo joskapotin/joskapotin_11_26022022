@@ -1,6 +1,6 @@
-import Hero from '../components/Hero'
-import image from '../assets/images/hero02.png'
-import Accordion from '../components/Accordion'
+import Hero from '../../components/Hero'
+import image from '../../assets/images/hero02.png'
+import Accordion from '../../components/Accordion'
 
 function About() {
   return (

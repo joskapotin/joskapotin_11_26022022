@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import './index.css'
 
 function Hero({ text = '', image }) {
@@ -13,3 +14,8 @@ function Hero({ text = '', image }) {
 }
 
 export default Hero
+
+Hero.proptype = {
+  text: PropTypes.string,
+  image: PropTypes.string.isRequired,
+}

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import './index.css'
 
 function TagList({ tags, className = 'taglist__default' }) {
@@ -11,3 +12,8 @@ function TagList({ tags, className = 'taglist__default' }) {
 }
 
 export default TagList
+
+TagList.proptype = {
+  tags: PropTypes.arrayOf(PropTypes.string.isRequired),
+  className: PropTypes.string,
+}

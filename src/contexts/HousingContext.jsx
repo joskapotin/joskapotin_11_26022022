@@ -29,7 +29,7 @@ function HousingContextProvider(props) {
   }, [])
 
   return (
-    <HousingContext.Provider value={{ data, loading, error }}>
+    <HousingContext.Provider value={{ data, loading, error }} {...props}>
       {props.children}
     </HousingContext.Provider>
   )

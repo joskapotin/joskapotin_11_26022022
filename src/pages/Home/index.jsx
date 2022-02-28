@@ -1,7 +1,7 @@
-import Hero from '../components/Hero'
-import image from '../assets/images/hero01.png'
+import Hero from '../../components/Hero'
+import image from '../../assets/images/hero01.png'
 
-import HousingList from '../components/HousingList'
+import HousingList from '../../components/HousingList'
 
 function Home() {
   return (

@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types'
 import './index.css'
 
-function Logo({ className }) {
+function Logo({ className = 'logo__default' }) {
   return (
     <svg
       className={`logo ${className}`}
@@ -18,3 +19,7 @@ function Logo({ className }) {
 }
 
 export default Logo
+
+Logo.proptype = {
+  className: PropTypes.string,
+}

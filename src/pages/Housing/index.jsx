@@ -1,14 +1,15 @@
 import { useContext } from 'react'
 import { useParams } from 'react-router-dom'
-import { HousingContext } from '../contexts/HousingContext'
+import { HousingContext } from '../../contexts/HousingContext'
 
-import Loading from '../components/Loading'
-import Error from '../components/Error'
-import Carousel from '../components/Carousel'
-import TagList from '../components/TagList'
-import Rating from '../components/Rating'
-import Host from '../components/Host'
-import Accordion from '../components/Accordion'
+import Loading from '../../components/Loading'
+import Error from '../../components/Error'
+import Carousel from '../../components/Carousel'
+import TagList from '../../components/TagList'
+import Rating from '../../components/Rating'
+import Host from '../../components/Host'
+import Accordion from '../../components/Accordion'
+import './index.css'
 
 function Housing() {
   const { data, loading, error } = useContext(HousingContext)
@@ -39,7 +40,7 @@ function Housing() {
         <p>{housing.description}</p>
       </Accordion>
       <Accordion className="housing__equipments" title="Equipements">
-        <ul className="equipment-list">{equipmentElements}</ul>
+        <ul className="housing__equipments__list">{equipmentElements}</ul>
       </Accordion>
     </main>
   )

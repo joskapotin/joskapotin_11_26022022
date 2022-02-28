@@ -1,0 +1,51 @@
+.housing__page {
+  display: grid;
+  align-content: start;
+  grid-template-areas:
+    'carousel carousel'
+    'title title'
+    'location location'
+    'tags tags'
+    'rating host'
+    'description description'
+    'equipments equipments';
+}
+
+.housing__carousel {
+  grid-area: carousel;
+}
+
+.housing__title {
+  margin: 0;
+  grid-area: title;
+}
+
+.housing__location {
+  margin: 5px 0 0;
+  grid-area: location;
+}
+
+.housing__rating {
+  align-self: center;
+  margin-top: 15px;
+  grid-area: rating;
+}
+
+.housing__description,
+.housing__equipments {
+  margin: 20px 0 0;
+}
+
+.housing__description {
+  grid-area: description;
+}
+
+.housing__equipments {
+  grid-area: equipments;
+}
+
+.housing__equipments__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

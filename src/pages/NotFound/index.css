@@ -1,0 +1,20 @@
+.not-found__page {
+  text-align: center;
+}
+
+.not-found__title {
+  font-size: 96px;
+  font-weight: 700;
+}
+
+.not-found__subtitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.not-found__link:link,
+.not-found__link:visited {
+  color: #ff6060;
+  font-size: 14px;
+  font-weight: 500;
+}

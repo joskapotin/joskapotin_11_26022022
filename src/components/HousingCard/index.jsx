@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import './index.css'
 
@@ -13,3 +14,10 @@ function HousingCard({ housing }) {
 }
 
 export default HousingCard
+
+HousingCard.proptype = {
+  housing: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }),
+}
