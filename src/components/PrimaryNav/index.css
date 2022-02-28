@@ -1,0 +1,18 @@
+.primary-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.primary-nav__link:link,
+.primary-nav__link:visited {
+  color: hsla(0, 100%, 69%, 1);
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.primary-nav__link:hover,
+.primary-nav__link:active,
+.primary-nav__link.active {
+  text-decoration: underline;
+}

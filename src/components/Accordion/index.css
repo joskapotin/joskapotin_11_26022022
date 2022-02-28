@@ -1,0 +1,79 @@
+.accordion__default {
+  margin-top: 20px;
+}
+.accordion__button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border: none;
+  background-color: #ff6060;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19px;
+  outline: none;
+}
+
+.accordion__button::after {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  content: '';
+  transform-origin: center;
+  transition: transform 0.3s;
+}
+
+.accordion__panel {
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion__content {
+  position: relative;
+  z-index: -1;
+  top: -5px;
+  padding: 17px 12px 5px;
+  background-color: hsla(0, 0%, 97%, 1);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.accordion-open::after {
+  transform: rotate(320deg);
+  transition: transform 0.3s;
+}
+
+.accordion-open + .accordion__panel {
+  max-height: 100vh;
+  transition: max-height 0.3s;
+}
+
+.accordion-open + .accordion__panel > * {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.accordion-close::after {
+  transform: rotate(135deg);
+  transition: transform 0.3s;
+}
+
+.accordion-close + .accordion__panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s;
+}
+
+.accordion-close + .accordion__panel > * {
+  opacity: 0;
+  transition: opacity 0.2s;
+}

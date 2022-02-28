@@ -1,0 +1,17 @@
+.footer {
+  display: grid;
+  height: 209px;
+  flex-shrink: 0; /* for the sticky footer trick */
+  margin-top: 20px;
+  background-color: #000;
+  color: #fff;
+  place-content: center;
+}
+
+.footer .logo {
+  margin: 0 auto 20px;
+}
+
+.copyright {
+  margin: 0;
+}
