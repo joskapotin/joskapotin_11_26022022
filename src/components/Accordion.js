@@ -1,16 +1,18 @@
 import useToggler from "../hooks/useToggler";
 
-function Accordion({ children, title }) {
+function Accordion({ children, title, className }) {
   const [isOpen, toggle] = useToggler(false);
 
-  const className = isOpen ? "accordion-open" : "accordion-close";
+  const statusClassName = isOpen ? "accordion-open" : "accordion-close";
 
   return (
-    <div className="accordion">
-      <h3 className="accordion__title" onClick={toggle}>
+    <div className={`accordion ${className}`}>
+      <button className={`accordion__button ${statusClassName}`} onClick={toggle}>
         {title}
-      </h3>
-      <div className={`accordion__item ${className}`}>{children}</div>
+      </button>
+      <div className="accordion__panel">
+        <div className="accordion__content">{children}</div>
+      </div>
     </div>
   );
 }

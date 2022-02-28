@@ -6,10 +6,22 @@
 
 body {
   margin: 0;
-  font-family: "Montserrat Alternates", "Open Sans", Helvetica, Arial, sans-serif;
+  color: hsla(0, 100%, 69%, 1);
+  font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
 }
+
+h1 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+/* HEADER */
 
 .header {
   display: flex;
@@ -19,6 +31,7 @@ body {
   margin: 20px 0;
 }
 
+/* LOGO */
 .logo {
   width: 145px;
   height: 47px;
@@ -29,6 +42,7 @@ body {
   fill: #fff;
 }
 
+/* NAVIGATION */
 .primary-nav {
   display: flex;
   gap: 10px;
@@ -48,12 +62,37 @@ body {
   text-decoration: underline;
 }
 
+/* MAIN */
+.main {
+  padding: 0 20px;
+}
+
+/* FOOTER */
+.footer {
+  display: grid;
+  height: 209px;
+  margin-top: 20px;
+  background-color: #000;
+  color: #fff;
+  place-content: center;
+}
+
+.footer .logo {
+  margin: 0 auto 20px;
+}
+
+.copyright {
+  margin: 0;
+}
+
+/* HERO */
 .hero {
   position: relative;
   display: grid;
   overflow: hidden;
   width: 100%;
   height: 111px;
+  margin-bottom: 20px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,14 +121,7 @@ body {
   line-height: 24px;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0 20px;
-  gap: 20px;
-}
-
+/* CARDS */
 .card-grid {
   display: grid;
   gap: 20px;
@@ -129,44 +161,176 @@ body {
   line-height: 26px;
 }
 
-.footer {
-  display: grid;
-  height: 209px;
-  margin-top: 20px;
-  background-color: #000;
+/* ACCORDION */
+.accordion__button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border: none;
+  background-color: #ff6060;
+  border-radius: 5px;
   color: #fff;
-  place-content: center;
+  cursor: pointer;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  outline: none;
 }
 
-.footer .logo {
-  margin: 0 auto 20px;
-}
-
-.copyright {
-  margin: 0;
-}
-
-.accordion__item {
-  padding: 20px;
-  border: 1px solid black;
-  transform-origin: top;
-}
-
-.accordion-open {
-  transform: scaleY(1);
+.accordion__button::after {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  content: "";
+  transform-origin: center;
   transition: transform 0.3s;
 }
-.accordion-open > * {
+
+.accordion__panel {
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion__content {
+  position: relative;
+  z-index: -1;
+  top: -5px;
+  padding: 17px 12px 5px;
+  background-color: hsla(0, 0%, 97%, 1);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.accordion-open::after {
+  transform: rotate(320deg);
+  transition: transform 0.3s;
+}
+
+.accordion-open + .accordion__panel {
+  max-height: 100vh;
+  transition: max-height 0.3s;
+}
+
+.accordion-open + .accordion__panel > * {
   opacity: 1;
   transition: opacity 0.2s;
 }
 
-.accordion-close {
-  transform: scaleY(0);
+.accordion-close::after {
+  transform: rotate(135deg);
   transition: transform 0.3s;
 }
 
-.accordion-close > * {
+.accordion-close + .accordion__panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s;
+}
+
+.accordion-close + .accordion__panel > * {
   opacity: 0;
   transition: opacity 0.2s;
+}
+
+/* HOUSING */
+.housing__page {
+  display: grid;
+  grid-template-areas:
+    "carousel carousel"
+    "title title"
+    "location location"
+    "tags tags"
+    "rating host"
+    "description description"
+    "equipments equipments";
+}
+
+.housing__carousel {
+  grid-area: carousel;
+}
+
+.housing__title {
+  margin: 0;
+  grid-area: title;
+}
+
+.housing__location {
+  margin: 5px 0 0;
+  grid-area: location;
+}
+
+/* TAGLIST */
+.housing__taglist {
+  display: flex;
+  padding: 0;
+  margin: 10px 0 0;
+  gap: 10px;
+  grid-area: tags;
+  list-style: none;
+}
+
+.taglist__item {
+  display: grid;
+  min-width: 80px;
+  min-height: 20px;
+  padding: 5px 15px;
+  margin: 0;
+  background-color: #ff6060;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 14px;
+  place-content: center;
+  text-align: center;
+}
+
+.housing__rating {
+  grid-area: rating;
+}
+
+/* HOST */
+.housing__host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  grid-area: host;
+  justify-self: end;
+}
+
+.host__name {
+  margin: 0;
+}
+
+.host__photo {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  object-fit: cover;
+}
+
+.housing__description,
+.housing__equipments {
+  margin: 20px 0 0;
+}
+
+.housing__description {
+  grid-area: description;
+}
+
+.housing__equipments {
+  grid-area: equipments;
+}
+
+.equipment-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }

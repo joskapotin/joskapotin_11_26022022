@@ -14,7 +14,7 @@ function HousingContextProvider({ children }) {
     setData(null);
     setError(null);
 
-    console.log("inside use effct");
+    console.log("inside useEffect");
 
     fetch(url)
       .then(result => result.json())

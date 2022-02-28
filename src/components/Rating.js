@@ -1,5 +1,5 @@
-function Rating({ rating }) {
-  return <span className="rating">{rating}</span>;
+function Rating({ rating, className }) {
+  return <span className={className}>{rating}</span>;
 }
 
 export default Rating;

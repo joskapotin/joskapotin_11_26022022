@@ -12,8 +12,9 @@ import Accordion from "../components/Accordion";
 
 function Housing() {
   const { data, loading, error } = useContext(HousingContext);
-  console.log(data);
   const { id } = useParams();
+  console.log("data", data);
+  console.log("param", id);
 
   const housing = data.find(item => item.id === id);
 
@@ -27,17 +28,19 @@ function Housing() {
   if (error) return <Error />;
 
   return (
-    <main className="main">
-      <Carousel />
-      <h1 className="h1">{housing.title}</h1>
+    <main className="main housing__page">
+      <Carousel className="housing__carousel" />
+      <h1 className="housing__title">{housing.title}</h1>
       <p className="housing__location">{housing.location}</p>
-      <TagList tags={housing.tags} />
-      <Rating rating={housing.rating} />
-      <Host host={housing.host} />
-      <Accordion title="Description">
+      <TagList className="housing__taglist" tags={housing.tags} />
+      <Rating className="housing__rating" rating={housing.rating} />
+      <Host className="housing__host" host={housing.host} />
+      <Accordion className="housing__description" title="Description">
         <p>{housing.description}</p>
       </Accordion>
-      <Accordion title="Equipements">{equipmentElements}</Accordion>
+      <Accordion className="housing__equipments" title="Equipements">
+        <ul className="equipment-list">{equipmentElements}</ul>
+      </Accordion>
     </main>
   );
 }

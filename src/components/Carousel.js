@@ -1,5 +1,5 @@
-function Carousel(props) {
-  return <h2>carousel</h2>;
+function Carousel({ className }) {
+  return <h2 className={className}>carousel</h2>;
 }
 
 export default Carousel;
