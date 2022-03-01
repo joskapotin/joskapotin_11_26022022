@@ -31,15 +31,20 @@
   line-height: 20px;
 }
 
+.housing__taglist {
+  margin: 10px 0 0;
+  grid-area: tags;
+}
+
 .housing__rating {
   align-self: center;
   margin-top: 15px;
   grid-area: rating;
 }
 
-.housing__description,
-.housing__equipments {
-  margin: 20px 0 0;
+.housing__host {
+  margin-top: 15px;
+  grid-area: host;
 }
 
 .housing__description {

@@ -1,7 +1,36 @@
-.accordion__default {
-  margin-top: 20px;
+.accordion__panel {
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
 }
-.accordion__button {
+
+.accordion__content {
+  position: relative;
+  z-index: -1;
+}
+
+.accordion-open + .accordion__panel {
+  max-height: 100vh;
+  transition: max-height 0.3s;
+}
+
+.accordion-open + .accordion__panel > * {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.accordion-close + .accordion__panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s;
+}
+
+.accordion-close + .accordion__panel > * {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/** DEFAULT THEME */
+.accordion__default .accordion__button {
   display: flex;
   width: 100%;
   align-items: center;
@@ -18,7 +47,7 @@
   outline: none;
 }
 
-.accordion__button::after {
+.accordion__default .accordion__button::after {
   display: block;
   width: 10px;
   height: 10px;
@@ -29,14 +58,7 @@
   transition: transform 0.3s;
 }
 
-.accordion__panel {
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-
-.accordion__content {
-  position: relative;
-  z-index: -1;
+.accordion__default .accordion__content {
   top: -5px;
   padding: 17px 12px 5px;
   background-color: hsla(0, 0%, 97%, 1);
@@ -47,49 +69,23 @@
   line-height: 17px;
 }
 
-.accordion-open::after {
+.accordion__default .accordion-open::after {
   transform: rotate(315deg);
   transition: transform 0.3s;
 }
 
-.accordion-open + .accordion__panel {
-  max-height: 100vh;
-  transition: max-height 0.3s;
-}
-
-.accordion-open + .accordion__panel > * {
-  opacity: 1;
-  transition: opacity 0.2s;
-}
-
-.accordion-close::after {
+.accordion__default .accordion-close::after {
   transform: rotate(135deg);
   transition: transform 0.3s;
 }
 
-.accordion-close + .accordion__panel {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.3s;
-}
-
-.accordion-close + .accordion__panel > * {
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
 @media screen and (min-width: 860px) {
-  .accordion {
-    margin-right: 100px;
-    margin-left: 100px;
-  }
-
-  .accordion__button {
+  .accordion__default .accordion__button {
     padding: 15px 20px;
     font-size: 24px;
   }
 
-  .accordion__content {
+  .accordion__default .accordion__content {
     font-size: 24px;
     line-height: 34px;
   }

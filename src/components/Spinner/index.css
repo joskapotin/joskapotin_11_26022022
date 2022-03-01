@@ -9,10 +9,12 @@
   justify-content: center;
   background-color: hsla(0, 0%, 0%, 0.8);
 }
+
 .spinner {
   animation: pulse 0.6s linear 0.3s infinite normal forwards;
   font-size: 4rem;
 }
+
 @keyframes pulse {
   0% {
     color: hsla(0, 0%, 100%, 1);

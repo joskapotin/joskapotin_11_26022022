@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 import './index.css'
-function Carousel({ className = 'carousel__default', pictures }) {
+function Carousel({ theme = 'carousel__default', className = '', pictures }) {
   const [current, setCurrent] = useState(0)
   const length = pictures.length
 
@@ -26,12 +26,12 @@ function Carousel({ className = 'carousel__default', pictures }) {
     </div>
   ))
   return (
-    <div className={`carousel ${className}`}>
+    <div className={`carousel ${theme} ${className}`}>
       <button onClick={prevSlide} className="carousel__btn carousel__btn-prev">
-        <span className="visually-hidden">previous picture</span>
+        <span className="carousel__btn__text">previous picture</span>
       </button>
       <button onClick={nextSlide} className="carousel__btn carousel__btn-next">
-        <span className="visually-hidden">next picture</span>
+        <span className="carousel__btn__text">next picture</span>
       </button>
       {pictureElements}
     </div>

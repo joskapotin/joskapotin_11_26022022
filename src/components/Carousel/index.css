@@ -5,7 +5,6 @@
   align-content: stretch;
   align-items: stretch;
   justify-content: stretch;
-  border-radius: 10px;
   grid-template-areas: 'carousel-stack';
   justify-items: stretch;
 }
@@ -13,7 +12,6 @@
 .carousel__btn {
   z-index: 10;
   align-self: center;
-  padding: 15px;
   border: none;
   background: none;
   grid-area: carousel-stack;
@@ -27,7 +25,28 @@
   justify-self: end;
 }
 
-.carousel__btn::after {
+.carousel__item {
+  align-self: stretch;
+  grid-area: carousel-stack;
+}
+
+.carousel__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DEFAULT THEME */
+.carousel__default {
+  border-radius: 10px;
+}
+
+.carousel__default .carousel__btn {
+  padding: 15px;
+}
+
+.carousel__default .carousel__btn::after {
   display: block;
   width: 20px;
   height: 20px;
@@ -38,23 +57,26 @@
   transition: transform 0.3s;
 }
 
-.carousel__btn-prev::after {
+.carousel__default .carousel__btn-prev::after {
   transform: rotate(225deg);
 }
 
-.carousel__btn-next::after {
+.carousel__default .carousel__btn-next::after {
   transform: rotate(45deg);
 }
 
-.carousel__item {
-  height: 255px;
-  align-self: stretch;
-  grid-area: carousel-stack;
+.carousel__default .carousel__btn__text {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  margin: -1px !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
 }
 
-.carousel__img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.carousel__default .carousel__item {
+  height: 255px;
 }

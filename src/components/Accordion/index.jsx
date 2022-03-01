@@ -5,7 +5,8 @@ import './index.css'
 function Accordion({
   children,
   title,
-  className = 'accordion__default',
+  theme = 'accordion__default',
+  className = '',
   open = false,
 }) {
   const [isOpen, toggle] = useToggler(open)
@@ -13,7 +14,7 @@ function Accordion({
   const statusClassName = isOpen ? 'accordion-open' : 'accordion-close'
 
   return (
-    <div className={`accordion ${className}`}>
+    <div className={`accordion ${theme} ${className}`}>
       <button
         className={`accordion__button ${statusClassName}`}
         onClick={toggle}
@@ -32,6 +33,7 @@ export default Accordion
 Accordion.proptype = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
+  theme: PropTypes.string,
   className: PropTypes.string,
   on: PropTypes.bool,
 }

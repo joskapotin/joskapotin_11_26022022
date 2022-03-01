@@ -2,9 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin: 10px 0 0;
   gap: 10px;
-  grid-area: tags;
   list-style: none;
 }
 
