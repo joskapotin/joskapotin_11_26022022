@@ -1,3 +1,9 @@
+:root {
+  --color-primary: 0 100% 69%; /* #ff6161 */
+  --color-white: 0 0% 100%;
+  --color-black: 0 0% 0%;
+}
+
 *,
 *::before,
 *::after {
@@ -6,7 +12,7 @@
 
 body {
   margin: 0;
-  color: hsla(0, 100%, 69%, 1);
+  color: hsl(var(--color-primary));
   font-family: Montserrat, 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
@@ -19,6 +25,15 @@ h1 {
   font-size: 18px;
   font-weight: 500;
   line-height: 26px;
+}
+
+/* ACCESSIBILITY */
+a:focus-visible,
+button:focus-visible {
+  background-color: hsl(var(--color-primary));
+  color: hsl(var(--color-white));
+  outline: 2px solid hsl(var(--color-primary));
+  outline-offset: 4px;
 }
 
 /* UTILITIES */

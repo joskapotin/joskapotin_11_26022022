@@ -36,10 +36,16 @@ function Housing() {
       <TagList className="housing__taglist" tags={housing.tags} />
       <Rating className="housing__rating" rating={housing.rating} />
       <Host className="housing__host" host={housing.host} />
-      <Accordion className="housing__description" title="Description">
+      <Accordion
+        className="housing__accordion housing__description"
+        title="Description"
+      >
         <p>{housing.description}</p>
       </Accordion>
-      <Accordion className="housing__equipments" title="Equipements">
+      <Accordion
+        className="housing__accordion housing__equipments"
+        title="Equipements"
+      >
         <ul className="housing__equipments__list">{equipmentElements}</ul>
       </Accordion>
     </main>

@@ -5,7 +5,7 @@
 
 .primary-nav__link:link,
 .primary-nav__link:visited {
-  color: hsla(0, 100%, 69%, 1);
+  color: hsl(var(--color-primary));
   font-size: 12px;
   font-weight: 500;
   text-decoration: none;

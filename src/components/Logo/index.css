@@ -1,15 +1,19 @@
 .logo {
   width: 145px;
   height: 47px;
-  fill: #ff6060;
 }
 
-.logo-light {
-  fill: #fff;
+/* DEFAULT THEME */
+.logo__default {
+  fill: hsl(var(--color-primary));
+}
+
+.logo-white {
+  fill: hsl(var(--color-white));
 }
 
 @media screen and (min-width: 860px) {
-  .logo {
+  .logo__default {
     width: 210px;
     height: 68px;
   }

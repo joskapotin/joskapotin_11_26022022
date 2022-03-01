@@ -12,9 +12,9 @@
   min-height: 20px;
   padding: 5px 15px;
   margin: 0;
-  background-color: #ff6060;
+  background-color: hsl(var(--color-primary));
   border-radius: 10px;
-  color: #fff;
+  color: hsl(var(--color-white));
   font-size: 10px;
   font-weight: 500;
   line-height: 14px;

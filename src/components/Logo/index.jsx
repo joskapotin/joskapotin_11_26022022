@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import './index.css'
 
-function Logo({ className = 'logo__default' }) {
+function Logo({ theme = 'logo__default' }) {
   return (
     <svg
-      className={`logo ${className}`}
+      className={`logo ${theme}`}
       viewBox="0 0 211 68"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

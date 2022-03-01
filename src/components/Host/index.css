@@ -1,9 +1,7 @@
 .housing__host {
   display: flex;
   align-items: center;
-  align-self: center;
   gap: 10px;
-  justify-self: end;
 }
 
 .host__name {

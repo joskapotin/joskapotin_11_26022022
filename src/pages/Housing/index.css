@@ -1,6 +1,8 @@
 .housing__page {
   display: grid;
   align-content: start;
+  align-items: start;
+  justify-content: stretch;
   grid-template-areas:
     'carousel carousel'
     'title title'
@@ -9,10 +11,12 @@
     'rating host'
     'description description'
     'equipments equipments';
+  justify-items: start;
 }
 
 .housing__carousel {
   grid-area: carousel;
+  justify-self: stretch;
 }
 
 .housing__title {
@@ -37,14 +41,23 @@
 }
 
 .housing__rating {
+  display: flex;
+  flex-direction: row;
   align-self: center;
-  margin-top: 15px;
+  padding: 0;
+  border: none;
+  margin: 15px 0;
   grid-area: rating;
 }
 
 .housing__host {
-  margin-top: 15px;
+  align-self: center;
   grid-area: host;
+  justify-self: end;
+}
+
+.housing__accordion {
+  justify-self: stretch;
 }
 
 .housing__description {
@@ -80,6 +93,19 @@
   .housing__location {
     font-size: 18px;
     line-height: 26px;
+  }
+
+  .housing__taglist {
+    align-self: center;
+  }
+
+  .housing__rating {
+    justify-self: end;
+  }
+
+  .housing__host {
+    align-self: start;
+    margin-top: 24px;
   }
 
   .housing__description {

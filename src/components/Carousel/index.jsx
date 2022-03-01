@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 import './index.css'
-function Carousel({ theme = 'carousel__default', className = '', pictures }) {
+function Carousel({ theme = 'carousel--default', className = '', pictures }) {
   const [current, setCurrent] = useState(0)
   const length = pictures.length
 

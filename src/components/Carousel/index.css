@@ -1,7 +1,6 @@
 .carousel {
   position: relative;
   display: grid;
-  overflow: hidden;
   align-content: stretch;
   align-items: stretch;
   justify-content: stretch;
@@ -38,34 +37,34 @@
 }
 
 /* DEFAULT THEME */
-.carousel__default {
-  border-radius: 10px;
-}
-
-.carousel__default .carousel__btn {
+.carousel--default .carousel__btn {
   padding: 15px;
 }
 
-.carousel__default .carousel__btn::after {
+.carousel--default .carousel__btn:focus-visible {
+  background-color: hsl(var(--color-primary));
+}
+
+.carousel--default .carousel__btn::after {
   display: block;
   width: 20px;
   height: 20px;
-  border-top: 3px solid #fff;
-  border-right: 3px solid #fff;
+  border-top: 3px solid hsl(var(--color-white));
+  border-right: 3px solid hsl(var(--color-white));
   content: '';
   transform-origin: center;
   transition: transform 0.3s;
 }
 
-.carousel__default .carousel__btn-prev::after {
+.carousel--default .carousel__btn-prev::after {
   transform: rotate(225deg);
 }
 
-.carousel__default .carousel__btn-next::after {
+.carousel--default .carousel__btn-next::after {
   transform: rotate(45deg);
 }
 
-.carousel__default .carousel__btn__text {
+.carousel--default .carousel__btn__text {
   position: absolute !important;
   overflow: hidden !important;
   width: 1px !important;
@@ -77,6 +76,14 @@
   white-space: nowrap !important;
 }
 
-.carousel__default .carousel__item {
+.carousel--default .carousel__item {
+  overflow: hidden;
   height: 255px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 860px) {
+  .carousel--default .carousel__item {
+    height: 415px;
+  }
 }

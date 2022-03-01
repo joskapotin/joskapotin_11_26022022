@@ -5,7 +5,7 @@ function Footer() {
   const year = new Date().getFullYear()
   return (
     <footer className="footer">
-      <Logo className="logo-light" />
+      <Logo theme="logo-white" />
       <p className="copyright">© {year} Kasa. All rights reserved</p>
     </footer>
   )

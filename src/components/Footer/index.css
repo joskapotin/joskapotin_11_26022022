@@ -1,8 +1,8 @@
 .footer {
   display: grid;
   height: 209px;
-  background-color: #000;
-  color: #fff;
+  background-color: hsl(var(--color-black));
+  color: hsl(var(--color-white));
   place-content: center;
 }
 

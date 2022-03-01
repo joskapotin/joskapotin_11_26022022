@@ -14,7 +14,7 @@
 .hero::before {
   align-self: stretch;
   background-blend-mode: darken;
-  background-color: hsla(0, 0%, 0%, 0.3);
+  background-color: hsla(var(--color-black) / 0.3);
   content: '';
   grid-area: hero-stack;
   justify-self: stretch;
@@ -24,7 +24,7 @@
   align-self: center;
   padding: 12px 32px;
   margin: 0;
-  color: #fff;
+  color: hsl(var(--color-white));
   font-size: 24px;
   font-weight: 500;
   grid-area: hero-stack;
