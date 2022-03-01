@@ -29,7 +29,7 @@ function Housing() {
   if (error) return <Error error={error} />
 
   return (
-    <main className="main housing__page">
+    <main className="main housing__page" id="main">
       <Carousel className="housing__carousel" pictures={housing.pictures} />
       <h1 className="housing__title">{housing.title}</h1>
       <p className="housing__location">{housing.location}</p>

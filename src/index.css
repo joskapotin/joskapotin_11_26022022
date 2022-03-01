@@ -2,6 +2,8 @@
   --color-primary: 0 100% 69%; /* #ff6161 */
   --color-white: 0 0% 100%;
   --color-black: 0 0% 0%;
+
+  --max-width: 1240px;
 }
 
 *,
@@ -63,13 +65,17 @@ body,
 }
 
 .header {
+  max-width: var(--max-width);
   flex-shrink: 0; /* for the sticky footer trick */
-  margin: 20px 0;
+  margin: 20px auto;
 }
 
 .main {
+  width: 100%;
+  max-width: var(--max-width);
   flex-grow: 1; /* for the sticky footer trick */
   padding: 0 20px;
+  margin: 0 auto;
 }
 
 .hero {
@@ -87,7 +93,7 @@ body,
   margin-top: 20px;
 }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 800px) {
   .about__page .accordion {
     margin-right: 100px;
     margin-left: 100px;

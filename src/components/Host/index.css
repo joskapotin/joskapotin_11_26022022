@@ -19,7 +19,7 @@
   object-fit: cover;
 }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 800px) {
   .host__name {
     font-size: 18px;
     line-height: 26px;

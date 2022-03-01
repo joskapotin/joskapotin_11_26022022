@@ -1,5 +1,6 @@
 .footer {
   display: grid;
+  width: 100%;
   height: 209px;
   background-color: hsl(var(--color-black));
   color: hsl(var(--color-white));

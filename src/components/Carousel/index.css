@@ -82,7 +82,7 @@
   border-radius: 10px;
 }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 800px) {
   .carousel--default .carousel__item {
     height: 415px;
   }

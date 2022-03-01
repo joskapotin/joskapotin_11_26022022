@@ -1,9 +1,3 @@
-.card-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr;
-}
-
 .card__link:link,
 .card__link:visited {
   display: grid;

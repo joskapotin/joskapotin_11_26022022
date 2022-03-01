@@ -3,7 +3,7 @@ import './index.css'
 
 function NotFound() {
   return (
-    <main className="main not-found__page">
+    <main className="main not-found__page" id="main">
       <h1 className="not-found__title">404</h1>
       <h2 className="not-found__subtitle">
         Oups! La page que vous demandez n'existe pas.

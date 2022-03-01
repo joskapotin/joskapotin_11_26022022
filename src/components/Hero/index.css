@@ -32,7 +32,7 @@
   line-height: 24px;
 }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 800px) {
   .hero {
     height: 223px;
   }

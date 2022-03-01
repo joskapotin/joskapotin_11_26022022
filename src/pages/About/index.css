@@ -1,0 +1,5 @@
+@media screen and (min-width: 800px) {
+  .about__page .accordion {
+    margin-top: 30px;
+  }
+}

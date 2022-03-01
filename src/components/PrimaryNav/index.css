@@ -18,7 +18,15 @@
   text-decoration: underline;
 }
 
-@media screen and (min-width: 860px) {
+.primary-nav__link:focus-visible {
+  background-color: hsl(var(--color-primary));
+  color: hsl(var(--color-white));
+  outline: 2px solid hsl(var(--color-primary));
+  outline-offset: 4px;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 800px) {
   .primary-nav {
     gap: 50px;
   }

@@ -48,6 +48,11 @@
   outline: none;
 }
 
+.accordion--default .accordion__button:focus-visible {
+  outline: 2px solid hsl(var(--color-primary));
+  outline-offset: 4px;
+}
+
 .accordion--default .accordion__button::after {
   display: block;
   width: 10px;
@@ -92,7 +97,7 @@
   transition: transform 0.3s;
 }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 800px) {
   .accordion--default .accordion__button {
     padding: 15px 20px;
     font-size: 24px;

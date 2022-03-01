@@ -74,7 +74,7 @@
   list-style: none;
 }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 800px) {
   .housing__page {
     grid-template-areas:
       'carousel carousel carousel carousel'
