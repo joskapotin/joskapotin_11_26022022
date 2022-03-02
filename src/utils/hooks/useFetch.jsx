@@ -1,26 +1,41 @@
 import { useState, useEffect } from 'react'
 
 function useFetch(url) {
-  const [data, setData] = useState(null)
+  const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState('')
 
   useEffect(() => {
-    setLoading(true)
-    setData(null)
-    setError(null)
+    const abortController = new AbortController()
 
-    fetch(url)
-      .then((result) => result.json())
-      .then((data) => {
-        setLoading(false)
-        setData(data)
-      })
-      .catch((error) => {
-        setLoading(false)
-        setError('An error occurred. Awkward..', error)
-      })
-  }, [url])
+    const fetchData = async () => {
+      setTimeout(async () => {
+        try {
+          const response = await fetch(url, { signal: abortController.signal })
+          const result = await response.json()
+          if (!response.ok) {
+            const error = (data && data.message) || response.status
+            return Promise.reject(error)
+          }
+          setData(result)
+        } catch (err) {
+          console.error(err)
+          setError(err)
+        } finally {
+          setLoading(false)
+        }
+      }, 2000)
+    }
+
+    if (data.length === 0) {
+      setLoading(true)
+      fetchData()
+    }
+
+    return () => {
+      abortController.abort()
+    }
+  }, [url, data])
 
   return { data, loading, error }
 }

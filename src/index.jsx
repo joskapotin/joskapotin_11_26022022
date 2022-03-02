@@ -4,11 +4,12 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { HousingContextProvider } from './utils/contexts/HousingContext'
 import './index.css'
 import App from './App'
+
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/joskapotin_11_26022022">
       <HousingContextProvider>
         <App />
       </HousingContextProvider>
