@@ -7,7 +7,9 @@ import './Home.css'
 function Home() {
   return (
     <Main className="home__page">
-      <Hero text="Chez vous, partout et ailleurs" image={image} />
+      <Hero image={image}>
+        <h1 className="hero-text">Chez vous, partout et ailleurs</h1>
+      </Hero>
       <HousingList />
     </Main>
   )

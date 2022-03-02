@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import RatingItem from './RatingItem/RatingItem'
+import RatingItem from '../RatingItem/RatingItem'
 
 function Rating({ rating, className, theme = 'rating__default' }) {
   const [ratingValue, setRatingValue] = useState(rating)
@@ -19,7 +19,7 @@ function Rating({ rating, className, theme = 'rating__default' }) {
 
       ratingElements.push(
         <RatingItem
-          key={i}
+          key={`ratingItem-${i}`}
           value={i}
           checked={checked}
           visualyCheck={visualyCheck}

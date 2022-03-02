@@ -8,12 +8,15 @@ import './HousingList.css'
 function HousingList() {
   const { data, loading, error } = useContext(HousingContext)
 
-  if ((loading || !data || data.length === 0) && !error)
+  if (loading) {
     return <Spinner>Loading...</Spinner>
+  }
 
-  if (error) return <Error error={error} />
+  if (error) {
+    return <Error error={error} />
+  }
 
-  const housingListElements = data.map((housing) => (
+  const housingListElements = data?.map((housing) => (
     <HousingCard key={housing.id} housing={housing} />
   ))
 

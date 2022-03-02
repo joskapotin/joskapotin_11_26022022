@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types'
 import './Hero.css'
 
-function Hero({ text = '', image }) {
+function Hero({ children, image }) {
   const style = {
     backgroundImage: 'url(' + image + ')',
   }
 
   return (
     <div className="hero" style={style}>
-      <h1 className="hero-text">{text}</h1>
+      {children}
     </div>
   )
 }
@@ -16,6 +16,6 @@ function Hero({ text = '', image }) {
 export default Hero
 
 Hero.proptype = {
-  text: PropTypes.string,
+  children: PropTypes.node,
   image: PropTypes.string.isRequired,
 }

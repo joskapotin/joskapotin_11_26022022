@@ -8,7 +8,7 @@ function SimpleList({
   itemClassName = '',
 }) {
   const listItemElements = array.map((item, index) => (
-    <li key={index} className={itemClassName}>
+    <li key={`listItem-${index}`} className={itemClassName}>
       {item}
     </li>
   ))

@@ -53,15 +53,16 @@ button:focus-visible {
 }
 
 /* GENERAL LAYOUT */
+html {
+  min-height: 100%; /* for the sticky footer trick */
+}
 html,
 body,
 #root,
 .app {
-  min-height: 100%; /* for the sticky footer trick */
-}
-.app {
   display: flex; /* for the sticky footer trick */
   flex-direction: column; /* for the sticky footer trick */
+  flex-grow: 1; /* for the sticky footer trick */
 }
 
 .header {
@@ -88,7 +89,6 @@ body,
 }
 
 /* ACCORDION LAYOUT */
-
 .accordion {
   margin-top: 20px;
 }

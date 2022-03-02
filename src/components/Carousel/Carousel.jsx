@@ -20,7 +20,7 @@ function Carousel({ theme = 'carousel--default', className = '', pictures }) {
   }
 
   const pictureElements = pictures.map((picture, index) => (
-    <div className="carousel__item" key={index}>
+    <div className="carousel__item" key={`carousel-${index}`}>
       {isLoaded(index) && (
         <img className="carousel__img" src={picture} alt="" />
       )}

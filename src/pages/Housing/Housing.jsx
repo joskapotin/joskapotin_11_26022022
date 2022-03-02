@@ -15,10 +15,13 @@ function Housing() {
   const { data, loading, error } = useContext(HousingContext)
   const { id } = useParams()
 
-  if ((loading || !data || data.length === 0) && !error)
+  if (loading) {
     return <Spinner>Loading...</Spinner>
+  }
 
-  if (error) return <Error error={error} />
+  if (error) {
+    return <Error error={error} />
+  }
 
   const housing = data?.find((item) => item.id === id)
 
