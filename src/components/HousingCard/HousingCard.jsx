@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import './index.css'
+import PropTypes from 'prop-types'
+import './HousingCard.css'
 
 function HousingCard({ housing }) {
   const style = {

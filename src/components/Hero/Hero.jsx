@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './index.css'
+import './Hero.css'
 
 function Hero({ text = '', image }) {
   const style = {

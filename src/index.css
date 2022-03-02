@@ -57,7 +57,7 @@ html,
 body,
 #root,
 .app {
-  height: 100%; /* for the sticky footer trick */
+  min-height: 100%; /* for the sticky footer trick */
 }
 .app {
   display: flex; /* for the sticky footer trick */

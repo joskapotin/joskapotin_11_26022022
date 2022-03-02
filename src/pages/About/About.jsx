@@ -1,8 +1,8 @@
-import Main from '../../components/Main'
-import Hero from '../../components/Hero'
+import Main from '../../components/Main/Main'
+import Hero from '../../components/Hero/Hero'
+import Accordion from '../../components/Accordion/Accordion'
 import image from '../../assets/images/hero02.png'
-import Accordion from '../../components/Accordion'
-import './index.css'
+import './About.css'
 
 function About() {
   return (

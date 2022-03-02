@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import RatingStar from './RatingStar'
+import RatingItem from './RatingItem/RatingItem'
 
 function Rating({ rating, className, theme = 'rating__default' }) {
   const [ratingValue, setRatingValue] = useState(rating)
@@ -18,7 +18,7 @@ function Rating({ rating, className, theme = 'rating__default' }) {
       const visualyCheck = i <= ratingValue ? true : false
 
       ratingElements.push(
-        <RatingStar
+        <RatingItem
           key={i}
           value={i}
           checked={checked}

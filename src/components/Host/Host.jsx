@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './index.css'
+import './Host.css'
 
 function Host({ host, className = 'host__default' }) {
   return (

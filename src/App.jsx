@@ -1,15 +1,14 @@
 import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import SkipToContent from './components/SkipToContent/SkipToContent'
+import Spinner from './components/Spinner/Spinner'
 
-import Header from './components/Header'
-import Footer from './components/Footer'
-import SkipToContent from './components/SkipToContent'
-import Spinner from './components/Spinner'
-
-const Home = lazy(() => import('./pages/Home'))
-const About = lazy(() => import('./pages/About'))
-const Housing = lazy(() => import('./pages/Housing'))
-const NotFound = lazy(() => import('./pages/NotFound'))
+const Home = lazy(() => import('./pages/Home/Home'))
+const About = lazy(() => import('./pages/About/About'))
+const Housing = lazy(() => import('./pages/Housing/Housing'))
+const NotFound = lazy(() => import('./pages/NotFound/NotFound'))
 
 function App() {
   return (

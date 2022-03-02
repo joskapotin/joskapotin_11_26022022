@@ -1,8 +1,8 @@
-import Main from '../../components/Main'
-import Hero from '../../components/Hero'
+import Main from '../../components/Main/Main'
+import Hero from '../../components/Hero/Hero'
+import HousingList from '../../components/HousingList/HousingList'
 import image from '../../assets/images/hero01.png'
-import HousingList from '../../components/HousingList'
-import './index.css'
+import './Home.css'
 
 function Home() {
   return (

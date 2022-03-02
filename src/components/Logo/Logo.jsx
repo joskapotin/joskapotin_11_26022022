@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './index.css'
+import './Logo.css'
 
 function Logo({ theme = 'logo__default' }) {
   return (

@@ -1,16 +1,15 @@
 import { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { HousingContext } from '../../utils/contexts/HousingContext'
-import Main from '../../components/Main'
-import Spinner from '../../components/Spinner'
-import Error from '../../components/Error'
-import Carousel from '../../components/Carousel'
-import TagList from '../../components/TagList'
-import Rating from '../../components/Rating'
-import Host from '../../components/Host'
-import Accordion from '../../components/Accordion'
-import SimpleList from '../../components/SimpleList'
-import './index.css'
+import Main from '../../components/Main/Main'
+import Carousel from '../../components/Carousel/Carousel'
+import SimpleList from '../../components/SimpleList/SimpleList'
+import Rating from '../../components/Rating/Rating'
+import Host from '../../components/Host/Host'
+import Accordion from '../../components/Accordion/Accordion'
+import Spinner from '../../components/Spinner/Spinner'
+import Error from '../../components/Error/Error'
+import './Housing.css'
 
 function Housing() {
   const { data, loading, error } = useContext(HousingContext)
@@ -28,7 +27,11 @@ function Housing() {
       <Carousel className="housing__carousel" pictures={housing.pictures} />
       <h1 className="housing__title">{housing.title}</h1>
       <p className="housing__location">{housing.location}</p>
-      <TagList className="housing__taglist" tags={housing.tags} />
+      <SimpleList
+        array={housing.tags}
+        theme="simple-list--housing"
+        listClassName="housing__taglist"
+      />
       <Rating className="housing__rating" rating={housing.rating} />
       <Host className="housing__host" host={housing.host} />
       <Accordion

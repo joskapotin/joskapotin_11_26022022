@@ -1,6 +1,6 @@
-import Logo from '../Logo'
-import PrimaryNav from '../PrimaryNav'
-import './index.css'
+import Logo from '../Logo/Logo'
+import PrimaryNav from '../PrimaryNav/PrimaryNav'
+import './Header.css'
 
 function Header() {
   return (

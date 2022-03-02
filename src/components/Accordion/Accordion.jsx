@@ -1,7 +1,6 @@
-import { nanoid } from 'nanoid'
 import PropTypes from 'prop-types'
 import useToggler from '../../utils/hooks/useToggler'
-import './index.css'
+import './Accordion.css'
 
 function Accordion({
   children,
@@ -12,35 +11,27 @@ function Accordion({
 }) {
   const [isOpen, toggle] = useToggler(open)
   const statusClassName = isOpen ? 'accordion-open' : 'accordion-close'
-  const accordionId = nanoid()
 
   return (
-    <section
-      className={`accordion ${theme} ${className}`}
-      aria-labelledby={`${title}-title`}
-    >
+    <div className={`accordion ${theme} ${className}`}>
       <button
         aria-expanded={isOpen}
-        aria-controls={accordionId}
+        aria-controls={`${title}-panel`}
         className={`accordion__button ${statusClassName}`}
         onClick={toggle}
+        id={`${title}-title`}
       >
         {title}
       </button>
       <div
         className="accordion__panel"
-        id={accordionId}
+        id={`${title}-panel`}
         role="region"
         aria-labelledby={`${title}-title`}
       >
-        <div className="accordion__content">
-          <h2 id={`${title}-title`} className="accordion__title">
-            {title}
-          </h2>
-          {children}
-        </div>
+        <div className="accordion__content">{children}</div>
       </div>
-    </section>
+    </div>
   )
 }
 

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
-import './index.css'
+import './RatingItem.css'
 
-function RatingStar({
+function RatingItem({
   value = 'star',
   checked = false,
   visualyCheck = false,
@@ -25,9 +25,9 @@ function RatingStar({
   )
 }
 
-export default RatingStar
+export default RatingItem
 
-RatingStar.proptype = {
+RatingItem.proptype = {
   value: PropTypes.string,
   checked: PropTypes.bool,
   visualyCheck: PropTypes.bool,

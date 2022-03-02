@@ -1,4 +1,4 @@
-import './index.css'
+import './SkipToContent.css'
 
 function SkipToContent() {
   return (

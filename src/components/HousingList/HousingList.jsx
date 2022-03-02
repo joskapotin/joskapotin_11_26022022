@@ -1,9 +1,9 @@
 import { useContext } from 'react'
 import { HousingContext } from '../../utils/contexts/HousingContext'
-import HousingCard from '../HousingCard'
-import Spinner from '../Spinner'
-import Error from '../Error'
-import './index.css'
+import HousingCard from '../HousingCard/HousingCard'
+import Spinner from '../Spinner/Spinner'
+import Error from '../Error/Error'
+import './HousingList.css'
 
 function HousingList() {
   const { data, loading, error } = useContext(HousingContext)

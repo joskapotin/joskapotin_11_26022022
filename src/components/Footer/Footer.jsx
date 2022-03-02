@@ -1,5 +1,5 @@
-import Logo from '../Logo'
-import './index.css'
+import Logo from '../Logo/Logo'
+import './Footer.css'
 
 function Footer() {
   const year = new Date().getFullYear()
