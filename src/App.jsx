@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import SkipToContent from './components/SkipToContent/SkipToContent'
 import Spinner from './components/Spinner/Spinner'
+import * as ROUTES from './constants/routes'
 
 const Home = lazy(() => import('./pages/Home/Home'))
 const About = lazy(() => import('./pages/About/About'))
@@ -19,8 +20,8 @@ function App() {
       <Suspense fallback={<Spinner />}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/housing/:id" element={<Housing />} />
-          <Route path="/about" element={<About />} />
+          <Route path={ROUTES.HOUSING} element={<Housing />} />
+          <Route path={ROUTES.ABOUT} element={<About />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </Suspense>

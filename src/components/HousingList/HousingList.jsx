@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { HousingContext } from '../../utils/contexts/HousingContext'
+import { HousingContext } from '../../contexts/HousingContext'
 import HousingCard from '../HousingCard/HousingCard'
 import Spinner from '../Spinner/Spinner'
 import Error from '../Error/Error'

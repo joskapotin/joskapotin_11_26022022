@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { useParams } from 'react-router-dom'
-import { HousingContext } from '../../utils/contexts/HousingContext'
+import { HousingContext } from '../../contexts/HousingContext'
 import Main from '../../components/Main/Main'
 import Carousel from '../../components/Carousel/Carousel'
 import SimpleList from '../../components/SimpleList/SimpleList'
