@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path={ROUTES.HOUSING} element={<Housing />} />
           <Route path={ROUTES.ABOUT} element={<About />} />
-          <Route path="/*" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
 
