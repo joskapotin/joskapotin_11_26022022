@@ -8,6 +8,15 @@
   justify-items: stretch;
 }
 
+.carousel__item {
+  align-self: stretch;
+  grid-area: carousel-stack;
+}
+
+.carousel__item:only-of-type ~ .carousel__btn {
+  display: none !important;
+}
+
 .carousel__btn {
   z-index: 10;
   align-self: center;
@@ -22,11 +31,6 @@
 
 .carousel__btn-next {
   justify-self: end;
-}
-
-.carousel__item {
-  align-self: stretch;
-  grid-area: carousel-stack;
 }
 
 .carousel__img {
