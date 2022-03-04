@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/joskapotin_11_26022022">
       <HousingContextProvider>
         <App />
       </HousingContextProvider>
