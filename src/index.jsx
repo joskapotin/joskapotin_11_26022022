@@ -7,13 +7,9 @@ import App from './App'
 
 import reportWebVitals from './reportWebVitals'
 
-const getBasename = (path) => {
-  path.substring(path.lastIndexOf('/') + 1)
-}
-
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename={getBasename(window.location.pathname)}>
+    <Router basename={process.env.PUBLIC_URL}>
       <HousingContextProvider>
         <App />
       </HousingContextProvider>
