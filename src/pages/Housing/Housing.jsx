@@ -32,11 +32,11 @@ function Housing() {
       <p className="housing__location">{housing.location}</p>
       <SimpleList
         array={housing.tags}
-        theme="simple-list--housing"
+        theme="tags-theme"
         listClassName="housing__taglist"
       />
       <Rating className="housing__rating" rating={housing.rating} />
-      <Host className="housing__host" host={housing.host} />
+      <Host host={housing.host} />
       <Accordion
         className="housing__accordion housing__description"
         title="Description"

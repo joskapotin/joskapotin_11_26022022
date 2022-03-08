@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types'
 
-function Main({ children, theme = 'main--default', className }) {
+/**
+ *
+ * @param {Object} props
+ * @param {JSX.Element} props.children - The content to display inside the component
+ * @param {String} props.className - A class to add to the component
+ * @returns
+ */
+function Main({ children, className }) {
   return (
-    <main className={`main ${theme} ${className}`} id="main">
+    <main className={`main ${className}`} id="main">
       {children}
     </main>
   )
@@ -10,8 +17,11 @@ function Main({ children, theme = 'main--default', className }) {
 
 export default Main
 
-Main.proptype = {
+Main.defaultProps = {
+  className: null,
+}
+
+Main.propTypes = {
   children: PropTypes.node.isRequired,
-  theme: PropTypes.string,
   className: PropTypes.string,
 }

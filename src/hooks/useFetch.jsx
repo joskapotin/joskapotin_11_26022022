@@ -9,22 +9,21 @@ function useFetch(url) {
     const abortController = new AbortController()
 
     const fetchData = async () => {
-      setTimeout(async () => {
-        try {
-          const response = await fetch(url, { signal: abortController.signal })
-          const result = await response.json()
-          if (!response.ok) {
-            const error = (data && data.message) || response.status
-            return Promise.reject(error)
-          }
-          setData(result)
-        } catch (err) {
-          console.error(err)
-          setError(err)
-        } finally {
-          setLoading(false)
+      try {
+        const response = await fetch(url, { signal: abortController.signal })
+        const result = await response.json()
+        if (!response.ok) {
+          const fetchError = (data && data.message) || response.status
+          return Promise.reject(fetchError)
         }
-      }, 2000)
+        setData(result)
+      } catch (err) {
+        setError(err)
+      } finally {
+        setLoading(false)
+      }
+
+      return undefined
     }
 
     if (data.length === 0) {

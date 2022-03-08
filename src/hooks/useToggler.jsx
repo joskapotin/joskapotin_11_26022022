@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 
-function useToggler(defaultOnValue = false) {
+/**
+ *
+ * @param {boolean} defaultOnValue - Set the default state
+ * @returns
+ */
+function useToggler(defaultOnValue) {
   const [isToggledOn, setIsToggledOn] = useState(defaultOnValue)
 
   function toggle() {
@@ -13,6 +18,10 @@ function useToggler(defaultOnValue = false) {
 
 export default useToggler
 
-useToggler.proptype = {
+useToggler.defaultProps = {
+  defaultOnValue: false,
+}
+
+useToggler.propTypes = {
   defaultOnValue: PropTypes.bool,
 }

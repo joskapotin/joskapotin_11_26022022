@@ -1,5 +1,5 @@
-/* simple-list--housing theme*/
-.simple-list--housing {
+/* tags theme*/
+.tags-theme {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -7,7 +7,7 @@
   list-style: none;
 }
 
-.simple-list--housing li {
+.tags-theme li {
   display: grid;
   min-width: 80px;
   min-height: 20px;
@@ -24,7 +24,7 @@
 }
 
 @media screen and (min-width: 800px) {
-  .simple-list--housing li {
+  .tags-theme li {
     font-size: 14px;
     line-height: 20px;
   }

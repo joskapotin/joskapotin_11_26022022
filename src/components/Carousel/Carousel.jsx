@@ -1,11 +1,19 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import './Carousel.css'
+import './Carousel-default-theme.css'
 
-function Carousel({ theme = 'carousel--default', className = '', pictures }) {
+/**
+ *
+ * @param {Object} props
+ * @param {string} props.className - A css class that can be added to the carousel.
+ * @param {boolean} props.pictures - An array of links to images.
+ * @returns
+ */
+function Carousel({ className, pictures }) {
   const [current, setCurrent] = useState(0)
   const [currents, setCurrents] = useState([0])
-  const length = pictures.length
+  const { length } = pictures
 
   useEffect(() => {
     if (length > 2) {
@@ -29,13 +37,22 @@ function Carousel({ theme = 'carousel--default', className = '', pictures }) {
       <img className="carousel__img" src={pictures[value]} alt="" />
     </div>
   ))
+
   return (
-    <div className={`carousel ${theme} ${className}`}>
+    <div className={`carousel ${className}`}>
       {pictureElements}
-      <button onClick={prevSlide} className="carousel__btn carousel__btn-prev">
+      <button
+        type="button"
+        onClick={prevSlide}
+        className="carousel__btn carousel__btn-prev"
+      >
         <span className="carousel__btn__text">previous picture</span>
       </button>
-      <button onClick={nextSlide} className="carousel__btn carousel__btn-next">
+      <button
+        type="button"
+        onClick={nextSlide}
+        className="carousel__btn carousel__btn-next"
+      >
         <span className="carousel__btn__text">next picture</span>
       </button>
     </div>
@@ -44,7 +61,11 @@ function Carousel({ theme = 'carousel--default', className = '', pictures }) {
 
 export default Carousel
 
-Carousel.proptype = {
+Carousel.defaultProps = {
+  className: '',
+}
+
+Carousel.propTypes = {
   className: PropTypes.string,
-  pictures: PropTypes.arrayOf(PropTypes.string),
+  pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
 }

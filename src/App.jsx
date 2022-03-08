@@ -20,7 +20,7 @@ function App() {
       <Suspense fallback={<Spinner />}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path={ROUTES.HOUSING} element={<Housing />} />
+          <Route path={`${ROUTES.HOUSING}/:id`} element={<Housing />} />
           <Route path={ROUTES.ABOUT} element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

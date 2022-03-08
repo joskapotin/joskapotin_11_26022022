@@ -50,7 +50,7 @@
   grid-area: rating;
 }
 
-.housing__host {
+.host {
   align-self: center;
   grid-area: host;
   justify-self: end;
@@ -103,7 +103,7 @@
     justify-self: end;
   }
 
-  .housing__host {
+  .host {
     align-self: start;
     margin-top: 24px;
   }

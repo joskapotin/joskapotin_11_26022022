@@ -20,6 +20,10 @@ function Logo({ theme = 'logo__default' }) {
 
 export default Logo
 
-Logo.proptype = {
-  className: PropTypes.string,
+Logo.defaultProps = {
+  theme: 'logo__default',
+}
+
+Logo.propTypes = {
+  theme: PropTypes.string,
 }

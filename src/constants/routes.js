@@ -1,2 +1,3 @@
-export const HOUSING = '/housing/:id'
+export const HOME = '/'
+export const HOUSING = '/housing'
 export const ABOUT = '/about'

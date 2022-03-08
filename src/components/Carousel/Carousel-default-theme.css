@@ -1,0 +1,50 @@
+.carousel__btn {
+  padding: 15px;
+}
+
+.carousel__btn:focus-visible {
+  background-color: hsl(var(--color-primary));
+}
+
+.carousel__btn::after {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid hsl(var(--color-white));
+  border-right: 3px solid hsl(var(--color-white));
+  content: '';
+  transform-origin: center;
+  transition: transform 0.3s;
+}
+
+.carousel__btn-prev::after {
+  transform: rotate(225deg);
+}
+
+.carousel__btn-next::after {
+  transform: rotate(45deg);
+}
+
+.carousel__btn__text {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  margin: -1px !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+}
+
+.carousel__item {
+  overflow: hidden;
+  height: 255px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 800px) {
+  .carousel__item {
+    height: 415px;
+  }
+}
