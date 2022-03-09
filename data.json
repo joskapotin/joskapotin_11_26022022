@@ -17,7 +17,13 @@
     },
     "rating": "5",
     "location": "Ile de France - Paris 17e",
-    "equipments": ["Équipements de base", "Micro-Ondes", "Douche italienne", "Frigo", "WIFI"],
+    "equipments": [
+      "Équipements de base",
+      "Micro-Ondes",
+      "Douche italienne",
+      "Frigo",
+      "WIFI"
+    ],
     "tags": ["Batignolle", "Montmartre"]
   },
   {
@@ -86,7 +92,13 @@
     },
     "rating": "3",
     "location": "Ile de France - Paris 11e",
-    "equipments": ["Micro-Ondes", "Wi-fi", "Chambre Séparée", "Climatisation", "Télévision"],
+    "equipments": [
+      "Micro-Ondes",
+      "Wi-fi",
+      "Chambre Séparée",
+      "Climatisation",
+      "Télévision"
+    ],
     "tags": ["Parmentier", "Marais", "Parc", "Night Life"]
   },
   {
@@ -108,7 +120,13 @@
     },
     "rating": "5",
     "location": "Ile de France - Paris 10e",
-    "equipments": ["Frigo Américain", "Sèche Cheveux", "Wi-fi", "Chambre Séparée", "Parking"],
+    "equipments": [
+      "Frigo Américain",
+      "Sèche Cheveux",
+      "Wi-fi",
+      "Chambre Séparée",
+      "Parking"
+    ],
     "tags": ["Goncourt", "Proche commerces"]
   },
   {
@@ -149,7 +167,14 @@
     },
     "rating": "3",
     "location": "Ile de France - Paris 18e",
-    "equipments": ["Salle de bains", "Frigo", "Wi-fi", "Sèche Cheveux", "Bureau", "Parking"],
+    "equipments": [
+      "Salle de bains",
+      "Frigo",
+      "Wi-fi",
+      "Sèche Cheveux",
+      "Bureau",
+      "Parking"
+    ],
     "tags": ["Transports", "Cheap", "18ème"]
   },
   {
@@ -199,7 +224,13 @@
     },
     "rating": "4",
     "location": "Ile de France - Paris 14e",
-    "equipments": ["Climatisation", "Machine à laver", "Sèche Cheveux", "Wi-fi", "Parking"],
+    "equipments": [
+      "Climatisation",
+      "Machine à laver",
+      "Sèche Cheveux",
+      "Wi-fi",
+      "Parking"
+    ],
     "tags": ["Montparnasse", "Commerces", "Famille"]
   },
   {
@@ -219,7 +250,14 @@
     },
     "rating": "3",
     "location": "Ile de France - Paris 11e",
-    "equipments": ["Vue Parc", "Chauffage", "Sèche linge", "Sèche Cheveux", "Wi-fi", "Ascenseur"],
+    "equipments": [
+      "Vue Parc",
+      "Chauffage",
+      "Sèche linge",
+      "Sèche Cheveux",
+      "Wi-fi",
+      "Ascenseur"
+    ],
     "tags": ["Père Lachaise", "11e", "Metro 3", "Metro 2"]
   },
   {
@@ -259,7 +297,14 @@
     },
     "rating": "3",
     "location": "Ile de France - Paris 3e",
-    "equipments": ["Rangements", "Lit", "Sèche Cheveux", "Wi-fi", "TV", "Bouilloire"],
+    "equipments": [
+      "Rangements",
+      "Lit",
+      "Sèche Cheveux",
+      "Wi-fi",
+      "TV",
+      "Bouilloire"
+    ],
     "tags": ["Marais", "République", "Studio", "Proche Métros", "Commerces"]
   },
   {
@@ -280,7 +325,13 @@
     },
     "rating": "5",
     "location": "Ile de France - Ecouen",
-    "equipments": ["SDB", "Cuisine équipée", "Toilettes sèches", "Frigo", "Bouilloire"],
+    "equipments": [
+      "SDB",
+      "Cuisine équipée",
+      "Toilettes sèches",
+      "Frigo",
+      "Bouilloire"
+    ],
     "tags": ["Forêt", "Nature", "Musée d'Ecouen"]
   },
   {
@@ -363,7 +414,15 @@
     },
     "rating": "3",
     "location": "Ile de France - La Défense",
-    "equipments": ["Baie vitrée", "Télévision", "Four", "Frigo", "Wi-fi", "Micro-Ondes", "Parking"],
+    "equipments": [
+      "Baie vitrée",
+      "Télévision",
+      "Four",
+      "Frigo",
+      "Wi-fi",
+      "Micro-Ondes",
+      "Parking"
+    ],
     "tags": ["La Défense", "Loft", "Luxe"]
   },
   {
@@ -384,7 +443,14 @@
     },
     "rating": "4",
     "location": "Ile de France - Levallois",
-    "equipments": ["Télévision", "Four", "Frigo", "Hotte", "Wi-fi", "Micro-Ondes"],
+    "equipments": [
+      "Télévision",
+      "Four",
+      "Frigo",
+      "Hotte",
+      "Wi-fi",
+      "Micro-Ondes"
+    ],
     "tags": ["Vue Parc", "Apt de Charme"]
   },
   {
@@ -410,8 +476,7 @@
     "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-18-1.jpg",
     "pictures": [
       "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-18-1.jpg",
-      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-18-2.jpg",
-      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-18-3.jpg"
+      "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-18-2.jpg"
     ],
     "description": "Ce studio décoré avec goût sera votre nid douillet après une longue journée passée à découvrir Paris.",
     "host": {
@@ -420,7 +485,13 @@
     },
     "rating": "4",
     "location": "Ile de France - Paris 13e",
-    "equipments": ["Équipements de base", "Four", "Frigo", "Wi-fi", "Micro-Ondes"],
+    "equipments": [
+      "Équipements de base",
+      "Four",
+      "Frigo",
+      "Wi-fi",
+      "Micro-Ondes"
+    ],
     "tags": ["Studio", "Charmant", "13e"]
   },
   {
@@ -437,7 +508,13 @@
     },
     "rating": "4",
     "location": "Ile de France - Paris 13e",
-    "equipments": ["Wi-fi", "Équipements de base", "Micro-Ondes", "Frigo", "Baignoire"],
+    "equipments": [
+      "Wi-fi",
+      "Équipements de base",
+      "Micro-Ondes",
+      "Frigo",
+      "Baignoire"
+    ],
     "tags": ["Louvre", "Marais", "Rivoli"]
   }
 ]
