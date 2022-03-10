@@ -1,10 +1,10 @@
 import Logo from '../Logo/Logo'
 import PrimaryNav from '../PrimaryNav/PrimaryNav'
-import './Header.css'
+import styles from './Header.module.scss'
 
 function Header() {
   return (
-    <header className="header">
+    <header className={`header ${styles.wrapper}`}>
       <Logo />
       <PrimaryNav />
     </header>

@@ -18,7 +18,7 @@ function Main({ children, className }) {
 export default Main
 
 Main.defaultProps = {
-  className: null,
+  className: '',
 }
 
 Main.propTypes = {

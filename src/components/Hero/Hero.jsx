@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './Hero.css'
+import styles from './Hero.module.scss'
 
 /**
  *
@@ -8,13 +8,13 @@ import './Hero.css'
  * @param {string} props.image - The background image of the hero.
  * @returns
  */
-function Hero({ children, image }) {
+function Hero({ children, image, className }) {
   const style = {
     backgroundImage: `url(${image})`,
   }
 
   return (
-    <div className="hero" style={style}>
+    <div className={`${className} ${styles.wrapper}`} style={style}>
       {children}
     </div>
   )
@@ -23,10 +23,12 @@ function Hero({ children, image }) {
 export default Hero
 
 Hero.defaultProps = {
+  className: 'hero',
   children: null,
 }
 
 Hero.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.node,
   image: PropTypes.string.isRequired,
 }

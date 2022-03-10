@@ -1,8 +1,7 @@
-.housing__page {
-  display: grid;
+.wrapper {
   align-content: start;
   align-items: start;
-  justify-content: stretch;
+  display: grid;
   grid-template-areas:
     'carousel carousel'
     'title title'
@@ -11,43 +10,44 @@
     'rating host'
     'description description'
     'equipments equipments';
+  justify-content: stretch;
   justify-items: start;
 }
 
-.housing__carousel {
+.carousel {
   grid-area: carousel;
   justify-self: stretch;
 }
 
-.housing__title {
-  margin: 15px 0 0;
+.title {
   font-size: 18px;
   font-weight: 500;
   grid-area: title;
   line-height: 26px;
+  margin: 15px 0 0;
 }
 
-.housing__location {
-  margin: 5px 0 0;
+.location {
   font-size: 14px;
   font-weight: 500;
   grid-area: location;
   line-height: 20px;
+  margin: 5px 0 0;
 }
 
-.housing__taglist {
-  margin: 10px 0 0;
+.taglist {
   grid-area: tags;
+  margin: 10px 0 0;
 }
 
-.housing__rating {
+.rating {
+  align-self: center;
+  border: 0;
   display: flex;
   flex-direction: row;
-  align-self: center;
-  padding: 0;
-  border: none;
-  margin: 15px 0;
   grid-area: rating;
+  margin: 15px 0;
+  padding: 0;
 }
 
 .host {
@@ -56,26 +56,26 @@
   justify-self: end;
 }
 
-.housing__accordion {
+.accordion {
   justify-self: stretch;
 }
 
-.housing__description {
+.description {
   grid-area: description;
 }
 
-.housing__equipments {
+.equipments {
   grid-area: equipments;
 }
 
-.housing__equipments__list {
-  padding: 0;
-  margin: 0;
+.equipments__list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: 800px) {
-  .housing__page {
+  .wrapper {
     grid-template-areas:
       'carousel carousel carousel carousel'
       'title title title host'
@@ -85,21 +85,21 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .housing__title {
+  .title {
     font-size: 36px;
     line-height: 51px;
   }
 
-  .housing__location {
+  .location {
     font-size: 18px;
     line-height: 26px;
   }
 
-  .housing__taglist {
+  .taglist {
     align-self: center;
   }
 
-  .housing__rating {
+  .rating {
     justify-self: end;
   }
 
@@ -108,11 +108,11 @@
     margin-top: 24px;
   }
 
-  .housing__description {
+  .description {
     margin-right: 35px;
   }
 
-  .housing__equipments {
+  .equipments {
     margin-left: 35px;
   }
 }

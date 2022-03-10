@@ -1,17 +1,18 @@
 import { Link } from 'react-router-dom'
-import './NotFound.css'
+import Main from '../../components/Main/Main'
+import styles from './NotFound.module.scss'
 
 function NotFound() {
   return (
-    <main className="main not-found__page" id="main">
-      <h1 className="not-found__title">404</h1>
-      <h2 className="not-found__subtitle">
+    <Main className={styles.wrapper}>
+      <h1 className={styles.title}>404</h1>
+      <h2 className={styles.subtitle}>
         Oups! La page que vous demandez n&apos;existe pas.
       </h2>
-      <Link to="/" className="not-found__link">
+      <Link to="/" className={styles.link}>
         Retourner sur la page d’accueil
       </Link>
-    </main>
+    </Main>
   )
 }
 

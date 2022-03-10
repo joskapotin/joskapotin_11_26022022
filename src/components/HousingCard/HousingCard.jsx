@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import Image from '../Image/Image'
 import { HOUSING } from '../../constants/routes'
-import './HousingCard.css'
+import styles from './HousingCard.module.scss'
 
 /**
  *
@@ -13,12 +14,10 @@ import './HousingCard.css'
  * @returns
  */
 function HousingCard({ housing }) {
-  const style = {
-    backgroundImage: `url(${housing.cover})`,
-  }
   return (
-    <Link className="card__link" to={`${HOUSING}/${housing.id}`} style={style}>
-      <span className="card__text">{housing.title}</span>
+    <Link className={styles.link} to={`${HOUSING}/${housing.id}`}>
+      <Image className={styles.image} src={housing.cover} />
+      <h2 className={styles.text}>{housing.title}</h2>
     </Link>
   )
 }

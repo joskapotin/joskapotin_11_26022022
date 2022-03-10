@@ -1,16 +1,12 @@
 import PropTypes from 'prop-types'
-import './Spinner.css'
+import styles from './Spinner.module.scss'
 
-/**
- *
- * @param {object} props
- * @param {JSX.Element} props.children - The content to display inside the component
- * @returns
- */
-function Spinner({ children }) {
+function Spinner({ className }) {
   return (
-    <div className="overlay">
-      <div className="spinner">{children}</div>
+    <div className={`${className} ${styles.wrapper}`}>
+      <div className={styles.animation}>
+        <span className={styles.text}>Loading...</span>
+      </div>
     </div>
   )
 }
@@ -18,9 +14,9 @@ function Spinner({ children }) {
 export default Spinner
 
 Spinner.defaultProps = {
-  children: 'Loading...',
+  className: 'spinner',
 }
 
 Spinner.propTypes = {
-  children: PropTypes.node,
+  className: PropTypes.string,
 }

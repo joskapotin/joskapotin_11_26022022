@@ -1,38 +1,38 @@
-.not-found__page {
+.wrapper {
   text-align: center;
 }
 
-.not-found__title {
+.title {
   font-size: 96px;
   font-weight: 700;
 }
 
-.not-found__subtitle {
+.subtitle {
   font-size: 18px;
   font-weight: 500;
 }
 
-.not-found__link:link,
-.not-found__link:visited {
-  color: hsl(var(--color-primary));
+.link:link,
+.link:visited {
+  color: #ff6161;
   font-size: 14px;
   font-weight: 500;
 }
 
 @media screen and (min-width: 800px) {
-  .not-found__title {
-    margin: 0;
+  .title {
     font-size: 288px;
     line-height: 411px;
+    margin: 0;
   }
 
-  .not-found__subtitle {
+  .subtitle {
     font-size: 36px;
     line-height: 51px;
   }
 
-  .not-found__link:link,
-  .not-found__link:visited {
+  .link:link,
+  .link:visited {
     font-size: 18px;
   }
 }

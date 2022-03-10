@@ -1,0 +1,16 @@
+.wrapper {
+  fill: #ff6161;
+  height: 47px;
+  width: 145px;
+}
+
+.white {
+  fill: #fff;
+}
+
+@media screen and (min-width: 800px) {
+  .default {
+    height: 68px;
+    width: 210px;
+  }
+}

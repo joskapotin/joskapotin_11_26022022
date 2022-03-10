@@ -1,6 +1,6 @@
 /* eslint react/no-array-index-key: "off" */
 import PropTypes from 'prop-types'
-import './SimpleList.css'
+import styles from './SimpleList.module.scss'
 
 /**
  *
@@ -13,26 +13,21 @@ import './SimpleList.css'
  */
 function SimpleList({ array, theme, listClassName, itemClassName }) {
   const listItemElements = array.map((item, index) => (
-    <li
-      key={`listItem-${index}`}
-      className={`simple-list__item ${itemClassName}`}
-    >
+    <li key={`listItem-${index}`} className={itemClassName}>
       {item}
     </li>
   ))
   return (
-    <ul className={`simple-list ${theme} ${listClassName}`}>
-      {listItemElements}
-    </ul>
+    <ul className={`${styles[theme]} ${listClassName}`}>{listItemElements}</ul>
   )
 }
 
 export default SimpleList
 
 SimpleList.defaultProps = {
-  theme: 'simple-list--default',
-  listClassName: null,
-  itemClassName: null,
+  theme: null,
+  listClassName: 'simple-list',
+  itemClassName: 'simple-list__item',
 }
 
 SimpleList.propTypes = {

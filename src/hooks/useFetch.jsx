@@ -3,27 +3,29 @@ import { useState, useEffect } from 'react'
 function useFetch(url) {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     const abortController = new AbortController()
 
     const fetchData = async () => {
-      try {
-        const response = await fetch(url, { signal: abortController.signal })
-        const result = await response.json()
-        if (!response.ok) {
-          const fetchError = (data && data.message) || response.status
-          return Promise.reject(fetchError)
+      setTimeout(async () => {
+        try {
+          const response = await fetch(url, { signal: abortController.signal })
+          const result = await response.json()
+          if (!response.ok) {
+            const fetchError = (data && data.message) || response.status
+            return Promise.reject(fetchError)
+          }
+          setData(result)
+        } catch (err) {
+          setError(err.message)
+        } finally {
+          setLoading(false)
         }
-        setData(result)
-      } catch (err) {
-        setError(err)
-      } finally {
-        setLoading(false)
-      }
 
-      return undefined
+        return undefined
+      }, 2000)
     }
 
     if (data.length === 0) {

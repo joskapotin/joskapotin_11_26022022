@@ -1,14 +1,23 @@
+import PropTypes from 'prop-types'
 import Logo from '../Logo/Logo'
-import './Footer.css'
+import styles from './Footer.module.scss'
 
-function Footer() {
+function Footer({ className }) {
   const year = new Date().getFullYear()
   return (
-    <footer className="footer">
-      <Logo theme="logo-white" />
-      <p className="copyright">© {year} Kasa. All rights reserved</p>
+    <footer className={`${className} ${styles.wrapper}`}>
+      <Logo className={styles.logo} theme="white" />
+      <p className={styles.copyright}>© {year} Kasa. All rights reserved</p>
     </footer>
   )
 }
 
 export default Footer
+
+Footer.defaultProps = {
+  className: 'footer',
+}
+
+Footer.propTypes = {
+  className: PropTypes.string,
+}

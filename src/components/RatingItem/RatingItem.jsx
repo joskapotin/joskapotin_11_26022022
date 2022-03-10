@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './RatingItem.css'
+import styles from './RatingItem.module.scss'
 
 /**
  *
@@ -12,9 +12,9 @@ import './RatingItem.css'
  */
 function RatingItem({ value, checked, visualyCheck, handleRating }) {
   return (
-    <label className="rating-star__form-control">
+    <label className={styles.wrapper}>
       <input
-        className="rating-star__input"
+        className={styles.input}
         name="rating"
         type="radio"
         value={parseInt(value, 10)}
@@ -22,7 +22,7 @@ function RatingItem({ value, checked, visualyCheck, handleRating }) {
         data-visualycheck={visualyCheck}
         onChange={handleRating}
       />
-      <span className="rating__text">
+      <span className={styles.text}>
         {value > 1 ? `${value} stars` : '1 star'}
       </span>
     </label>

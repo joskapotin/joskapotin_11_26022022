@@ -1,8 +1,8 @@
-import './SkipToContent.css'
+import styles from './SkipToContent.module.scss'
 
 function SkipToContent() {
   return (
-    <a className="skip-to-content-link" href="#main">
+    <a className={styles.wrapper} href="#main">
       Skip to content
     </a>
   )

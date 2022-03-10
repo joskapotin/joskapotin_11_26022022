@@ -1,13 +1,13 @@
-.skip-to-content-link {
-  position: absolute;
-  left: 50%;
+.wrapper {
   height: 30px;
+  left: 50%;
   padding: 8px;
+  position: absolute;
   text-decoration: none;
   transform: translateY(-100%);
   transition: transform 0.3s;
 }
 
-.skip-to-content-link:focus {
+.wrapper:focus {
   transform: translateY(0%);
 }

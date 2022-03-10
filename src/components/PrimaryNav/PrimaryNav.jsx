@@ -1,14 +1,14 @@
 import { NavLink } from 'react-router-dom'
 import * as ROUTES from '../../constants/routes'
-import './PrimaryNav.css'
+import styles from './PrimaryNav.module.scss'
 
 function PrimaryNav() {
   return (
-    <nav className="primary-nav" aria-label="primary">
-      <NavLink className="primary-nav__link" to={ROUTES.HOME}>
+    <nav className={styles.wrapper} aria-label="primary">
+      <NavLink className={styles.link} to={ROUTES.HOME}>
         Accueil
       </NavLink>
-      <NavLink className="primary-nav__link" to={ROUTES.ABOUT}>
+      <NavLink className={styles.link} to={ROUTES.ABOUT}>
         A propos
       </NavLink>
     </nav>

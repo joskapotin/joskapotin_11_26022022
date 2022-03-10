@@ -1,22 +1,22 @@
-.card-grid {
+.wrapper {
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr;
 }
 
 @media screen and (min-width: 800px) {
-  .card-grid {
+  .wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (min-width: 1240px) {
-  .card-grid {
-    padding: 50px;
-    background-color: hsla(var(--color-black) / 0.036);
+  .wrapper {
+    background-color: hsla(0, 0%, 0%, 0.036);
     border-radius: 25px;
     color: hsl(0, 0%, 96%);
-    gap: 50px;
+    gap: 55px;
     grid-template-columns: repeat(3, 1fr);
+    padding: 55px;
   }
 }

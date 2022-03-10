@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import useToggler from '../../hooks/useToggler'
-import './Accordion.css'
-import './Accordion-default-theme.css'
+import styles from './Accordion.module.scss'
 
 /**
  *
@@ -14,27 +13,26 @@ import './Accordion-default-theme.css'
  */
 function Accordion({ children, title, className, open }) {
   const [isOpen, toggle] = useToggler(open)
-  const statusClassName = isOpen ? 'accordion-open' : 'accordion-close'
 
   return (
-    <div className={`accordion ${className}`}>
+    <div className={className}>
       <button
         type="button"
         aria-expanded={isOpen}
         aria-controls={`${title}-panel`}
-        className={`accordion__button ${statusClassName}`}
+        className={`${styles.button} ${isOpen ? styles.open : styles.close}`}
         onClick={toggle}
         id={`${title}-title`}
       >
         {title}
       </button>
       <div
-        className="accordion__panel"
+        className={styles.panel}
         id={`${title}-panel`}
         role="region"
         aria-labelledby={`${title}-title`}
       >
-        <div className="accordion__content">{children}</div>
+        <div className={styles.content}>{children}</div>
       </div>
     </div>
   )
@@ -43,7 +41,7 @@ function Accordion({ children, title, className, open }) {
 export default Accordion
 
 Accordion.defaultProps = {
-  className: '',
+  className: 'accordion',
   open: false,
 }
 

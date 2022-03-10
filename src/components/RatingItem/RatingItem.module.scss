@@ -1,4 +1,4 @@
-.rating-star__form-control {
+.wrapper {
   --star-size: 15px;
   --star-gap: 4px;
 
@@ -7,52 +7,51 @@
   grid-template-columns: 1em auto;
 }
 
-.rating-star__input {
-  display: grid;
-  width: var(--star-size);
-  height: var(--star-size);
-  margin: 0;
+.input {
   appearance: none;
   background-image: url('../../assets/images/staroff.svg');
   background-repeat: no-repeat;
   background-size: contain;
-  place-content: center;
-}
-
-.rating__legend,
-.rating__text {
-  position: absolute !important;
-  overflow: hidden !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  border: 0 !important;
-  margin: -1px !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-}
-
-.rating-star__input::before {
-  width: var(--star-size);
+  display: grid;
   height: var(--star-size);
+  margin: 0;
+  place-content: center;
+  width: var(--star-size);
+}
+
+.text {
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.input::before {
   background-image: url('../../assets/images/staron.svg');
   background-repeat: no-repeat;
   background-size: contain;
   content: '';
+  height: var(--star-size);
   opacity: 0;
+  width: var(--star-size);
 }
 
-.rating-star__input[data-visualycheck='true']::before {
+.input[data-visualycheck='true']::before {
   opacity: 1;
 }
 
-.rating-star__input:focus-visible {
-  outline: max(2px, 0.15em) solid currentColor;
-  outline-offset: max(2px, 0.15em);
+.input:focus-visible {
+  outline: max(0.125rem, 0.15rem) solid currentColor;
+  outline-offset: max(0.125rem, 0.15rem);
 }
 
 @media screen and (min-width: 800px) {
-  .rating-star__form-control {
+  .wrapper {
     --star-size: 30px;
     --star-gap: 20px;
   }

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
 import RatingItem from '../RatingItem/RatingItem'
+import styles from './Rating.module.scss'
 
 /**
  *
@@ -42,7 +43,7 @@ function Rating({ rating, className }) {
 
   return (
     <fieldset className={`${className}`}>
-      <legend className="rating__legend">Votre note:</legend>
+      <legend className={styles.legend}>Votre note:</legend>
       {ratingElements}
     </fieldset>
   )
@@ -51,7 +52,7 @@ function Rating({ rating, className }) {
 export default Rating
 
 Rating.defaultProps = {
-  className: null,
+  className: '',
 }
 
 Rating.propTypes = {

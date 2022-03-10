@@ -1,30 +1,30 @@
 /* tags theme*/
-.tags-theme {
+.tags {
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
   gap: 10px;
   list-style: none;
+  padding: 0;
 }
 
-.tags-theme li {
-  display: grid;
-  min-width: 80px;
-  min-height: 20px;
-  padding: 5px 15px;
-  margin: 0;
-  background-color: hsl(var(--color-primary));
+.tags li {
+  background-color: #ff6161;
   border-radius: 10px;
-  color: hsl(var(--color-white));
+  color: #fff;
+  display: grid;
   font-size: 10px;
   font-weight: 500;
   line-height: 14px;
+  margin: 0;
+  min-height: 20px;
+  min-width: 80px;
+  padding: 5px 15px;
   place-content: center;
   text-align: center;
 }
 
 @media screen and (min-width: 800px) {
-  .tags-theme li {
+  .tags li {
     font-size: 14px;
     line-height: 20px;
   }

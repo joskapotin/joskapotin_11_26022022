@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './Host.css'
+import styles from './Host.module.scss'
 
 /**
  *
@@ -12,9 +12,9 @@ import './Host.css'
  */
 function Host({ host, className }) {
   return (
-    <div className={`host ${className}`}>
-      <p className="host__name">{host.name}</p>
-      <img className="host__photo" src={host.picture} alt="" />
+    <div className={`${className} ${styles.wrapper}`}>
+      <p className={styles.name}>{host.name}</p>
+      <img className={styles.photo} src={host.picture} alt="" />
     </div>
   )
 }
@@ -22,7 +22,7 @@ function Host({ host, className }) {
 export default Host
 
 Host.defaultProps = {
-  className: '',
+  className: 'host',
 }
 
 Host.propTypes = {

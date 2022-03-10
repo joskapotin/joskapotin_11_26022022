@@ -1,32 +1,33 @@
-.host {
-  display: flex;
+.wrapper {
   align-items: center;
+  display: flex;
   gap: 10px;
 }
 
-.host__name {
-  margin: 0;
+.name {
   font-size: 12px;
   font-weight: 500;
   line-height: 17px;
+  margin: 0;
   text-align: right;
 }
 
-.host__photo {
-  width: 32px;
-  height: 32px;
+.photo {
   border-radius: 32px;
+  height: 32px;
   object-fit: cover;
+  width: 32px;
 }
 
 @media screen and (min-width: 800px) {
-  .host__name {
+  .name {
     font-size: 18px;
     line-height: 26px;
   }
-  .host__photo {
-    width: 64px;
-    height: 64px;
+
+  .photo {
     border-radius: 64px;
+    height: 64px;
+    width: 64px;
   }
 }

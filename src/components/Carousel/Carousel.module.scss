@@ -1,0 +1,103 @@
+.wrapper {
+  align-content: stretch;
+  align-items: stretch;
+  display: grid;
+  grid-template-areas: 'carousel-stack';
+  justify-content: stretch;
+  justify-items: stretch;
+  position: relative;
+}
+
+.slide {
+  align-self: stretch;
+  grid-area: carousel-stack;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+.slide:only-of-type {
+  opacity: 1;
+}
+
+.current {
+  opacity: 1;
+}
+
+.button {
+  align-self: center;
+  background: none;
+  border: 0;
+  grid-area: carousel-stack;
+  z-index: 100;
+}
+
+.slide:only-of-type ~ .button {
+  display: none !important;
+}
+
+.previous {
+  justify-self: start;
+}
+
+.next {
+  justify-self: end;
+}
+
+.image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/** theme **/
+.button {
+  padding: 15px;
+}
+
+.button:focus-visible {
+  background-color: #ff6161;
+}
+
+.button::after {
+  border-right: 3px solid #fff;
+  border-top: 3px solid #fff;
+  content: '';
+  display: block;
+  height: 20px;
+  transform-origin: center;
+  transition: transform 0.3s;
+  width: 20px;
+}
+
+.previous::after {
+  transform: rotate(225deg);
+}
+
+.next::after {
+  transform: rotate(45deg);
+}
+
+.text {
+  border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.slide {
+  border-radius: 10px;
+  height: 255px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 800px) {
+  .slide {
+    height: 415px;
+  }
+}

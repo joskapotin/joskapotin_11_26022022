@@ -3,13 +3,13 @@ import { HousingContext } from '../../contexts/HousingContext'
 import HousingCard from '../HousingCard/HousingCard'
 import Spinner from '../Spinner/Spinner'
 import Error from '../Error/Error'
-import './HousingList.css'
+import styles from './HousingList.module.scss'
 
 function HousingList() {
   const { data, loading, error } = useContext(HousingContext)
 
   if (loading) {
-    return <Spinner>Loading...</Spinner>
+    return <Spinner />
   }
 
   if (error) {
@@ -20,7 +20,7 @@ function HousingList() {
     <HousingCard key={housing.id} housing={housing} />
   ))
 
-  return <div className="card-grid">{housingListElements}</div>
+  return <div className={styles.wrapper}>{housingListElements}</div>
 }
 
 export default HousingList

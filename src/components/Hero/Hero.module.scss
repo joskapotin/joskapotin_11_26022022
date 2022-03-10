@@ -1,51 +1,51 @@
-.hero {
+.wrapper {
   --padding-inline: 32px;
   --padding-block: 16px;
   --min-height: 111px;
 
-  position: relative;
-  display: grid;
-  overflow: hidden;
-  width: 100%;
-  min-height: var(--min-height);
-  padding: var(--padding-block) var(--padding-inline);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 25px;
-}
-
-.hero::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-blend-mode: darken;
-  background-color: hsla(var(--color-black) / 0.3);
-  content: '';
-}
-
-.hero-text {
+  display: grid;
+  min-height: var(--min-height);
+  overflow: hidden;
+  padding: var(--padding-block) var(--padding-inline);
   position: relative;
+  width: 100%;
+}
+
+.wrapper::before {
+  background-blend-mode: darken;
+  background-color: hsla(0, 0%, 0%, 0.3);
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.wrapper > * {
   align-self: center;
-  padding: 0;
-  margin: 0;
-  color: hsl(var(--color-white));
+  color: #fff;
   font-size: 24px;
   font-weight: 500;
   justify-self: flex-start;
   line-height: 24px;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 @media screen and (min-width: 800px) {
-  .hero {
+  .wrapper {
     --padding-inline: 32px;
     --padding-block: 50px;
     --min-height: 223px;
   }
 
-  .hero-text {
+  .wrapper > * {
     font-size: 48px;
     justify-self: center;
     line-height: 1.5;

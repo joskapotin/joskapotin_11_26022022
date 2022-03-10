@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import './Carousel.css'
-import './Carousel-default-theme.css'
+import styles from './Carousel.module.scss'
 
 /**
  *
@@ -16,12 +15,31 @@ function Carousel({ className, pictures }) {
   const { length } = pictures
 
   useEffect(() => {
-    if (length > 2) {
-      if (current === 0) setCurrents([length - 1, current, current + 1])
-      else if (current === length - 1) setCurrents([current - 1, current, 0])
-      else setCurrents([current - 1, current, current + 1])
-    } else if (length === 2) setCurrents([current, current + 1])
-    else setCurrents([current])
+    const updateCurrents = () => {
+      if (length > 2) {
+        switch (current) {
+          case 0:
+            setCurrents([length - 1, current, current + 1])
+            break
+          case length - 1:
+            setCurrents([current - 1, current, 0])
+            break
+          default:
+            setCurrents([current - 1, current, current + 1])
+            break
+        }
+      } else if (length === 2) {
+        switch (current) {
+          case 1:
+            setCurrents([current, 0])
+            break
+          default:
+            setCurrents([current, 1])
+            break
+        }
+      } else setCurrents([current])
+    }
+    updateCurrents()
   }, [current, length])
 
   const prevSlide = () => {
@@ -32,28 +50,33 @@ function Carousel({ className, pictures }) {
     setCurrent(current === length - 1 ? 0 : current + 1)
   }
 
-  const pictureElements = currents.map((value) => (
-    <div className="carousel__item" key={`carousel-${pictures[value]}`}>
-      <img className="carousel__img" src={pictures[value]} alt="" />
+  const pictureElements = currents.map((value, index) => (
+    <div
+      className={
+        index === 1 ? `${styles.slide} ${styles.current}` : styles.slide
+      }
+      key={`carousel-${pictures[value]}`}
+    >
+      <img className={styles.image} src={pictures[value]} alt="" />
     </div>
   ))
 
   return (
-    <div className={`carousel ${className}`}>
+    <div className={`${styles.wrapper} ${className}`}>
       {pictureElements}
       <button
         type="button"
         onClick={prevSlide}
-        className="carousel__btn carousel__btn-prev"
+        className={`${styles.button} ${styles.previous}`}
       >
-        <span className="carousel__btn__text">previous picture</span>
+        <span className={styles.text}>previous picture</span>
       </button>
       <button
         type="button"
         onClick={nextSlide}
-        className="carousel__btn carousel__btn-next"
+        className={`${styles.button} ${styles.next}`}
       >
-        <span className="carousel__btn__text">next picture</span>
+        <span className={styles.text}>next picture</span>
       </button>
     </div>
   )
@@ -62,7 +85,7 @@ function Carousel({ className, pictures }) {
 export default Carousel
 
 Carousel.defaultProps = {
-  className: '',
+  className: 'carousel',
 }
 
 Carousel.propTypes = {
