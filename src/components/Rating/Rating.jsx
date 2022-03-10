@@ -21,7 +21,7 @@ function Rating({ rating, className }) {
     const maxRating = 5
     const ratingElements = []
 
-    for (let i = 1; i <= maxRating; i += 1) {
+    for (let i = 0; i <= maxRating; i += 1) {
       const checked = i === value
       const visualyCheck = i <= value
 
@@ -42,7 +42,7 @@ function Rating({ rating, className }) {
   const ratingElements = createRatingElements(ratingValue)
 
   return (
-    <fieldset className={`${className}`}>
+    <fieldset className={`${styles.wrapper} ${className}`}>
       <legend className={styles.legend}>Votre note:</legend>
       {ratingElements}
     </fieldset>

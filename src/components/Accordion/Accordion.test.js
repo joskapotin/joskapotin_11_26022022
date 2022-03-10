@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 
 import Accordion from './Accordion'
+import styles from './Accordion.module.scss'
 
 describe('Accordion', () => {
   describe('When i give it a title', () => {
@@ -33,7 +34,7 @@ describe('Accordion', () => {
         </Accordion>
       )
       const button = screen.getByRole('button')
-      expect(button).toHaveClass('accordion-close')
+      expect(button).toHaveClass(styles.close)
     })
   })
 
@@ -45,7 +46,7 @@ describe('Accordion', () => {
         </Accordion>
       )
       const button = screen.getByRole('button')
-      expect(button).toHaveClass('accordion-open')
+      expect(button).toHaveClass(styles.open)
     })
   })
 
@@ -58,7 +59,7 @@ describe('Accordion', () => {
       )
       const button = screen.getByRole('button')
       fireEvent.click(button)
-      expect(button).toHaveClass('accordion-open')
+      expect(button).toHaveClass(styles.open)
     })
   })
 
@@ -71,7 +72,7 @@ describe('Accordion', () => {
       )
       const button = screen.getByRole('button')
       fireEvent.click(button)
-      expect(button).toHaveClass('accordion-close')
+      expect(button).toHaveClass(styles.close)
     })
   })
 })
