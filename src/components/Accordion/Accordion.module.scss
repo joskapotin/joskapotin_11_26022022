@@ -1,3 +1,7 @@
+.accordion {
+  display: block;
+}
+
 .panel {
   max-height: 0;
   transition: max-height 0.2s ease-out;

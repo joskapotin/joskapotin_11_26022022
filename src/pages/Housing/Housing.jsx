@@ -1,9 +1,7 @@
 import { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { HousingContext } from '../../contexts/HousingContext'
-import Main from '../../components/Main/Main'
 import Carousel from '../../components/Carousel/Carousel'
-import SimpleList from '../../components/SimpleList/SimpleList'
 import Rating from '../../components/Rating/Rating'
 import Host from '../../components/Host/Host'
 import Accordion from '../../components/Accordion/Accordion'
@@ -17,50 +15,60 @@ function Housing() {
 
   if (loading) {
     return (
-      <Main>
+      <main id="main-content" className="main">
         <Spinner />
-      </Main>
+      </main>
     )
   }
 
   if (error) {
     return (
-      <Main>
+      <main id="main-content" className="main">
         <Error error={error} />
-      </Main>
+      </main>
     )
   }
 
   const housing = data?.find((item) => item.id === id)
 
   return (
-    <Main className={styles.wrapper}>
-      <Carousel className={styles.carousel} pictures={housing.pictures} />
+    <main id="main-content" className={`main ${styles.wrapper}`}>
+      <div className={styles.carousel}>
+        <Carousel pictures={housing.pictures} />
+      </div>
+
       <h1 className={styles.title}>{housing.title}</h1>
+
       <p className={styles.location}>{housing.location}</p>
-      <SimpleList
-        array={housing.tags}
-        theme="tags"
-        listClassName={styles.taglist}
-      />
-      <Rating className={styles.rating} rating={housing.rating} />
-      <Host className={styles.host} host={housing.host} />
-      <Accordion
-        className={`accordion ${styles.accordion} ${styles.description}`}
-        title="Description"
-      >
-        <p>{housing.description}</p>
-      </Accordion>
-      <Accordion
-        className={`accordion ${styles.accordion} ${styles.equipments}`}
-        title="Equipements"
-      >
-        <SimpleList
-          array={housing.equipments}
-          listClassName={styles.equipments__list}
-        />
-      </Accordion>
-    </Main>
+
+      <ul className={styles.tags}>
+        {housing.tags.map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </ul>
+
+      <div className={styles.rating}>
+        <Rating rating={housing.rating} />
+      </div>
+
+      <div className={styles.host}>
+        <Host host={housing.host} />
+      </div>
+
+      <div className={styles.info}>
+        <Accordion title="Description">
+          <p>{housing.description}</p>
+        </Accordion>
+
+        <Accordion title="Equipements">
+          <ul className={styles.equipments}>
+            {housing.equipments.map((equipment) => (
+              <li key={equipment}>{equipment}</li>
+            ))}
+          </ul>
+        </Accordion>
+      </div>
+    </main>
   )
 }
 

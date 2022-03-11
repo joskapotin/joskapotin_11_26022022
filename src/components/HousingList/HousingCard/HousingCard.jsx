@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import Image from '../Image/Image'
-import { HOUSING } from '../../constants/routes'
+import Image from '../../Image/Image'
+import { HOUSING } from '../../../constants/routes'
 import styles from './HousingCard.module.scss'
 
 /**

@@ -1,4 +1,8 @@
 .wrapper {
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
   position: relative;
 
   .legend {

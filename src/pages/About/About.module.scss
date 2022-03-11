@@ -1,0 +1,13 @@
+.accordions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 800px) {
+  .accordions {
+    gap: 1.875rem;
+    padding: 0 6.25rem;
+  }
+}

@@ -5,11 +5,10 @@ import styles from './Carousel.module.scss'
 /**
  *
  * @param {Object} props
- * @param {string} props.className - A css class that can be added to the carousel.
  * @param {boolean} props.pictures - An array of links to images.
  * @returns
  */
-function Carousel({ className, pictures }) {
+function Carousel({ pictures }) {
   const [current, setCurrent] = useState(0)
   const [currents, setCurrents] = useState([0])
   const { length } = pictures
@@ -62,7 +61,7 @@ function Carousel({ className, pictures }) {
   ))
 
   return (
-    <div className={`${styles.wrapper} ${className}`}>
+    <div className={`${styles.wrapper}`}>
       {pictureElements}
       <button
         type="button"
@@ -84,11 +83,6 @@ function Carousel({ className, pictures }) {
 
 export default Carousel
 
-Carousel.defaultProps = {
-  className: 'carousel',
-}
-
 Carousel.propTypes = {
-  className: PropTypes.string,
   pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
 }

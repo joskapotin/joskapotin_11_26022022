@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { fetchData } from '../services/services'
 
 function useFetch(url) {
   const [data, setData] = useState([])
@@ -8,29 +9,18 @@ function useFetch(url) {
   useEffect(() => {
     const abortController = new AbortController()
 
-    const fetchData = async () => {
-      setTimeout(async () => {
+    if (data.length === 0) {
+      ;(async () => {
         try {
-          const response = await fetch(url, { signal: abortController.signal })
-          const result = await response.json()
-          if (!response.ok) {
-            const fetchError = (data && data.message) || response.status
-            return Promise.reject(fetchError)
-          }
+          setLoading(true)
+          const result = await fetchData(url, abortController)
           setData(result)
         } catch (err) {
           setError(err.message)
         } finally {
           setLoading(false)
         }
-
-        return undefined
-      }, 2000)
-    }
-
-    if (data.length === 0) {
-      setLoading(true)
-      fetchData()
+      })()
     }
 
     return () => {

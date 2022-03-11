@@ -1,16 +1,16 @@
 .wrapper {
+  align-items: center;
   background-color: #000;
   color: #fff;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   height: 209px;
-  place-content: center;
-  width: 100%;
-}
-
-.logo {
-  margin: 0 auto 20px;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  padding: 66px 0 30px;
 }
 
 .copyright {
   margin: 0;
+  text-align: center;
 }

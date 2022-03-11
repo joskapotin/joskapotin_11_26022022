@@ -1,17 +1,18 @@
-import Main from '../../components/Main/Main'
 import Hero from '../../components/Hero/Hero'
 import HousingList from '../../components/HousingList/HousingList'
 import image from '../../assets/images/hero01.png'
-import './Home.css'
+import styles from './Home.module.scss'
 
 function Home() {
   return (
-    <Main className="home__page">
+    <main id="main-content" className="main">
       <Hero image={image}>
         <h1 className="hero-text">Chez vous, partout et ailleurs</h1>
       </Hero>
-      <HousingList />
-    </Main>
+      <div className={styles.housing}>
+        <HousingList />
+      </div>
+    </main>
   )
 }
 

@@ -9,7 +9,7 @@
 
 .input {
   appearance: none;
-  background-image: url('../../assets/images/staroff.svg');
+  background-image: url('../../../assets/images/staroff.svg');
   background-repeat: no-repeat;
   background-size: contain;
   display: grid;
@@ -32,7 +32,7 @@
 }
 
 .input::before {
-  background-image: url('../../assets/images/staron.svg');
+  background-image: url('../../../assets/images/staron.svg');
   background-repeat: no-repeat;
   background-size: contain;
   content: '';

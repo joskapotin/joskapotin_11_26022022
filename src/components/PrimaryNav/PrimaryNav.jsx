@@ -5,10 +5,20 @@ import styles from './PrimaryNav.module.scss'
 function PrimaryNav() {
   return (
     <nav className={styles.wrapper} aria-label="primary">
-      <NavLink className={styles.link} to={ROUTES.HOME}>
+      <NavLink
+        className={(navData) =>
+          navData.isActive ? styles.active : styles.link
+        }
+        to={ROUTES.HOME}
+      >
         Accueil
       </NavLink>
-      <NavLink className={styles.link} to={ROUTES.ABOUT}>
+      <NavLink
+        className={(navData) =>
+          navData.isActive ? styles.active : styles.link
+        }
+        to={ROUTES.ABOUT}
+      >
         A propos
       </NavLink>
     </nav>

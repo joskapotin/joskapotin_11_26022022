@@ -1,18 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
-import { HousingContextProvider } from './contexts/HousingContext'
-import './index.css'
 import App from './App'
+import './index.css'
 
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
     <Router basename="/joskapotin_11_26022022">
-      <HousingContextProvider>
-        <App />
-      </HousingContextProvider>
+      <App />
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

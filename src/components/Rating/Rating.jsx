@@ -1,16 +1,15 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import RatingItem from '../RatingItem/RatingItem'
+import RatingItem from './RatingItem/RatingItem'
 import styles from './Rating.module.scss'
 
 /**
  *
  * @param {Object} props
  * @param {string} props.rating - The rating value as a string
- * @param {String} props.className - A class to add to the component
  * @returns
  */
-function Rating({ rating, className }) {
+function Rating({ rating }) {
   const [ratingValue, setRatingValue] = useState(rating)
 
   function handleRating(value) {
@@ -42,7 +41,7 @@ function Rating({ rating, className }) {
   const ratingElements = createRatingElements(ratingValue)
 
   return (
-    <fieldset className={`${styles.wrapper} ${className}`}>
+    <fieldset className={styles.wrapper}>
       <legend className={styles.legend}>Votre note:</legend>
       {ratingElements}
     </fieldset>
@@ -51,11 +50,6 @@ function Rating({ rating, className }) {
 
 export default Rating
 
-Rating.defaultProps = {
-  className: '',
-}
-
 Rating.propTypes = {
   rating: PropTypes.string.isRequired,
-  className: PropTypes.string,
 }

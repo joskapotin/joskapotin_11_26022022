@@ -8,8 +8,7 @@
     'location location'
     'tags tags'
     'rating host'
-    'description description'
-    'equipments equipments';
+    'info info';
   justify-content: stretch;
   justify-items: start;
 }
@@ -20,34 +19,51 @@
 }
 
 .title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   grid-area: title;
-  line-height: 26px;
-  margin: 15px 0 0;
+  line-height: 1.625rem;
+  margin: 0.9375rem 0 0;
 }
 
 .location {
-  font-size: 14px;
+  font-size: 0.9375rem;
   font-weight: 500;
   grid-area: location;
-  line-height: 20px;
-  margin: 5px 0 0;
+  line-height: 1.25rem;
+  margin: 0.625rem 0 0;
 }
 
-.taglist {
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
   grid-area: tags;
-  margin: 10px 0 0;
+  list-style: none;
+  margin: 0.625rem 0;
+  padding: 0;
+
+  li {
+    background-color: #ff6161;
+    border-radius: 0.3125rem;
+    color: #fff;
+    display: grid;
+    font-size: 0.625rem;
+    font-weight: 500;
+    line-height: 0.9375rem;
+    margin: 0;
+    min-height: 1.25rem;
+    min-width: 5rem;
+    padding: 0.3125rem 0.9375rem;
+    place-content: center;
+    text-align: center;
+  }
 }
 
 .rating {
   align-self: center;
-  border: 0;
-  display: flex;
-  flex-direction: row;
   grid-area: rating;
-  margin: 15px 0;
-  padding: 0;
+  margin: 0.9375rem 0;
 }
 
 .host {
@@ -56,19 +72,15 @@
   justify-self: end;
 }
 
-.accordion {
-  justify-self: stretch;
-}
-
-.description {
-  grid-area: description;
+.info {
+  display: flex;
+  flex-direction: column;
+  grid-area: info;
+  grid-gap: 1.25rem;
+  margin-top: 0.625rem;
 }
 
 .equipments {
-  grid-area: equipments;
-}
-
-.equipments__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -81,7 +93,7 @@
       'title title title host'
       'location location location host'
       'tags tags tags rating'
-      'description description equipments equipments';
+      'info info info info';
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -95,8 +107,13 @@
     line-height: 26px;
   }
 
-  .taglist {
+  .tags {
     align-self: center;
+
+    li {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   .rating {
@@ -108,11 +125,9 @@
     margin-top: 24px;
   }
 
-  .description {
-    margin-right: 35px;
-  }
-
-  .equipments {
-    margin-left: 35px;
+  .info {
+    display: grid;
+    gap: 70px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }

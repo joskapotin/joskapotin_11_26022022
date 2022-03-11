@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import styles from './Logo.module.scss'
 
-function Logo({ className, theme }) {
+function Logo({ theme }) {
   return (
     <svg
-      className={`${styles.wrapper} ${className} ${styles[theme]}`}
+      className={`logo ${styles.wrapper} ${styles[theme]}`}
       viewBox="0 0 211 68"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -21,11 +21,9 @@ function Logo({ className, theme }) {
 export default Logo
 
 Logo.defaultProps = {
-  className: 'logo',
   theme: 'default',
 }
 
 Logo.propTypes = {
-  className: PropTypes.string,
   theme: PropTypes.string,
 }

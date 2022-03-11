@@ -1,0 +1,52 @@
+/* GENERAL LAYOUT */
+html {
+  --max-width: 1240px;
+
+  min-height: 100%; /* for the sticky footer trick */
+}
+
+html,
+body,
+#root,
+.app {
+  display: flex; /* for the sticky footer trick */
+  flex-direction: column; /* for the sticky footer trick */
+  flex-grow: 1; /* for the sticky footer trick */
+}
+
+.header {
+  flex-shrink: 0; /* for the sticky footer trick */
+  max-width: var(--max-width);
+}
+
+.main {
+  flex-grow: 1; /* for the sticky footer trick */
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding: 0 20px;
+}
+
+.hero {
+  margin-bottom: 20px;
+}
+
+.footer {
+  flex-shrink: 0; /* for the sticky footer trick */
+}
+
+@media screen and (min-width: 800px) {
+  .header {
+    margin-bottom: 50px;
+  }
+
+  .hero {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

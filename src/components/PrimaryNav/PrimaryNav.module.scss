@@ -3,8 +3,8 @@
   gap: 10px;
 }
 
-.link:link,
-.link:visited {
+.link,
+.active {
   color: #ff6161;
   font-size: 12px;
   font-weight: 500;
@@ -14,11 +14,12 @@
 
 .link:hover,
 .link:active,
-.link.active {
+.active {
   text-decoration: underline;
 }
 
-.link:focus-visible {
+.link:focus-visible,
+.active:focus-visible {
   background-color: #ff6161;
   color: #fff;
   outline: 2px solid #ff6161;
@@ -31,8 +32,8 @@
     gap: 50px;
   }
 
-  .link:link,
-  .link:visited {
+  .link,
+  .active {
     font-size: 24px;
   }
 }

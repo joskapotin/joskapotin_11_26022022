@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { HousingContext } from '../../contexts/HousingContext'
-import HousingCard from '../HousingCard/HousingCard'
+import HousingCard from './HousingCard/HousingCard'
 import Spinner from '../Spinner/Spinner'
 import Error from '../Error/Error'
 import styles from './HousingList.module.scss'

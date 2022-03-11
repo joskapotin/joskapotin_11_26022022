@@ -8,13 +8,13 @@ import styles from './Hero.module.scss'
  * @param {string} props.image - The background image of the hero.
  * @returns
  */
-function Hero({ children, image, className }) {
+function Hero({ children, image }) {
   const style = {
     backgroundImage: `url(${image})`,
   }
 
   return (
-    <div className={`${className} ${styles.wrapper}`} style={style}>
+    <div className={`hero ${styles.wrapper}`} style={style}>
       {children}
     </div>
   )
@@ -23,12 +23,10 @@ function Hero({ children, image, className }) {
 export default Hero
 
 Hero.defaultProps = {
-  className: 'hero',
   children: null,
 }
 
 Hero.propTypes = {
-  className: PropTypes.string,
   children: PropTypes.node,
   image: PropTypes.string.isRequired,
 }
