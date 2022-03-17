@@ -29,7 +29,15 @@ function Housing() {
     )
   }
 
-  const housing = data?.find((item) => item.id === id)
+  const housing = data.find((item) => item.id === id)
+
+  if (!housing) {
+    return (
+      <main id="main-content" className="main">
+        <Error error={error} />
+      </main>
+    )
+  }
 
   return (
     <main id="main-content" className={`main ${styles.wrapper}`}>

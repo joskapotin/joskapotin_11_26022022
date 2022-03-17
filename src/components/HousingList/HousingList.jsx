@@ -16,7 +16,7 @@ function HousingList() {
     return <Error error={error} />
   }
 
-  const housingListElements = data?.map((housing) => (
+  const housingListElements = data.map((housing) => (
     <HousingCard key={housing.id} housing={housing} />
   ))
 

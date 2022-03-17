@@ -11,8 +11,7 @@ const HousingContext = createContext()
  * @returns
  */
 function HousingContextProvider({ children }) {
-  const url = './data.json'
-  const { data, loading, error } = useFetch(url)
+  const { data, loading, error } = useFetch('./data.json')
   const values = useMemo(
     () => ({ data, loading, error }),
     [data, loading, error]
