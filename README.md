@@ -79,29 +79,39 @@ Plus tard dans la journée, vous recevez un e-mail de Paul, le designer, qui vou
 
 ### Livrables
 
-- Le lien du repository GitHub contenant l’ensemble du code du projet :
+1. Un fichier au format TXT contenant le lien vers votre code sur GitHub contenant l’ensemble du code du projet : :
 
-- Le code React du projet
-- Le code React Router pour les routes dans un fichier dédié
+   - Le code React du projet
+   - Le code React Router pour les routes dans un fichier dédié
 
-Le repo GitHub doit être nommé avec la convention suivante : Nomcomplet\_#_Datedémarrage. Le # correspond au numéro du projet sur le parcours et la date doit être au format jjmmaaaa. Par exemple, FrancoisLenotre_5_05032020.
+Pour faciliter votre passage devant le jury, déposez sur la plateforme, dans un dossier zip nommé “Titre_du_projet_nom_prénom”, avec tous les livrables du projet comme suit : Nom_Prénom_n° du livrable_nom du livrable\_\_date de démarrage du projet. Cela donnera :
 
-### Soutenance
+- Nom_Prénom_1_code_mmaaaa.
+
+Par exemple, le premier livrable peut être nommé comme suit : Dupont_Jean_1_code_012022.
+
+## Soutenance
 
 Durant la présentation orale, le mentor interprétera le rôle du CTO. La soutenance est structurée de la manière suivante :
 
 - **Présentation des livrables (15 minutes)**
 
-- Présentation des différentes pages, avec la navigation entre elles, et interactions avec tous les éléments interactifs.
-- Parcours des fichiers de code avec le mentor. Mise en avant des différents composants React.
+  - Présentation des différentes pages, avec la navigation entre elles, et interactions avec tous les éléments interactifs.
+  - Parcours des fichiers de code avec le mentor. Mise en avant des différents composants React.
 
 - **Discussion (10 min)**
 
-- Le mentor, qui joue le rôle du CTO, posera des questions sur la méthodologie adoptée et sur les livrables.
+  - Le mentor, qui joue le rôle du CTO, posera des questions sur la méthodologie adoptée et sur les livrables.
 
-Le mentor challengera au maximum les décisions techniques que vous avez prises, il faudra donc que vous soyez capable de les justifier, et de défendre votre travail. À la fin de la soutenance, le mentor arrêtera de jouer le rôle du CTO pour vous permettre de débriefer ensemble.
+  - Le mentor challengera au maximum les décisions techniques que vous avez prises, il faudra donc que vous soyez capable de les justifier, et de défendre votre travail. À la fin de la soutenance, le mentor arrêtera de jouer le rôle du CTO pour vous permettre de débriefer ensemble.
 
-### Compétences évaluées
+- **Debrief (5 minutes)**
+
+  - À la fin de la soutenance, le mentor arrêtera de jouer le rôle du CTO pour vous permettre de débriefer ensemble.
+
+> Votre présentation devrait durer 15 minutes (+/- 5 minutes). Puisque le respect de la durée des présentations est important en milieu professionnel, les présentations en dessous de 10 minutes ou au-dessus de 20 minutes peuvent être refusées.
+
+## Compétences évaluées
 
 - Développer les routes d'une application web avec React Router
 - Initialiser une application web avec un framework
