@@ -1,5 +1,6 @@
 import { useContext } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
+import { NOTFOUND } from '../../constants/routes'
 import { HousingContext } from '../../contexts/HousingContext'
 import Carousel from '../../components/Carousel/Carousel'
 import Rating from '../../components/Rating/Rating'
@@ -12,6 +13,8 @@ import styles from './Housing.module.scss'
 function Housing() {
   const { data, loading, error } = useContext(HousingContext)
   const { id } = useParams()
+
+  const housing = data.find((item) => item.id === id)
 
   if (loading) {
     return (
@@ -29,14 +32,8 @@ function Housing() {
     )
   }
 
-  const housing = data.find((item) => item.id === id)
-
   if (!housing) {
-    return (
-      <main id="main-content" className="main">
-        <Error error={error} />
-      </main>
-    )
+    return <Navigate to={NOTFOUND} />
   }
 
   return (
